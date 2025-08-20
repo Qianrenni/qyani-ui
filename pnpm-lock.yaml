@@ -452,8 +452,8 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  qyani-components@1.2.2:
-    resolution: {integrity: sha512-VnWdtp/YA5DPHeLS7lU5z6bI58htAgpH1nPPLkTbZDy5mTns7D9SUGkV7kMSk21oUAa8G2wpYxZxozuGQKKaIg==}
+  qyani-components@1.2.3:
+    resolution: {integrity: sha512-dVpRphJ0uy7yVC2KNQuaZLljdTMitdwQgxr0fIyBIZJmcfRM/cxfAuMvV/tfbL7MV3t50skowF45DhWNq5CMJA==}
     peerDependencies:
       vue: ^3.5.18
 
@@ -861,7 +861,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  qyani-components@1.2.2(vue@3.5.18(typescript@5.8.3)):
+  qyani-components@1.2.3(vue@3.5.18(typescript@5.8.3)):
     dependencies:
       vue: 3.5.18(typescript@5.8.3)
 
