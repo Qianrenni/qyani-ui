@@ -46,12 +46,12 @@ export const useComponentInfo:ComponentInfo[] = [
     },
     {
         "category": "components/display",
-        "name": "CarouselItem",
-        "displayName": "CarouselItem",
-        "vuePath": "/src/components/display/CarouselItem.vue",
-        "docPath": "/docs/components/display/CarouselItem.md",
-        "docContent": "# 暂无内容",
-        "displayPath": "/display/components/display/CarouselItem.vue"
+        "name": "Carousel",
+        "displayName": "Carousel",
+        "vuePath": "/src/components/display/Carousel.vue",
+        "docPath": "/docs/components/display/Carousel.md",
+        "docContent": "# Props 参数\r\n\r\n| 参数              | 类型                                                                 | 默认值              | 必填 | 说明                                                         |\r\n|-------------------|----------------------------------------------------------------------|-------------------|----|------------------------------------------------------------|\r\n| `vertical`        | `boolean`                                                            | `false`           | 否  | 是否垂直方向轮播                                               |\r\n| `autoplay`        | `boolean`                                                            | `true`            | 否  | 是否自动播放                                                   |\r\n| `duration`        | `number`                                                             | `500`             | 否  | 动画持续时间（毫秒）                                            |\r\n| `indicator`       | `boolean`                                                            | `true`            | 否  | 是否显示指示器                                                 |\r\n| `indicatorPosition` | `'center-bottom' \\| 'center-top' \\| 'left-bottom' \\| 'left-top' \\| 'left-center' \\| 'right-bottom' \\| 'right-top' \\| 'right-center'` | `'center-bottom'` | 否  | 指示器位置                                                    |\r\n| `width`           | `number`                                                             | —                 | 是  | 轮播容器宽度（px）                                             |\r\n| `height`          | `number`                                                             | —                 | 是  | 轮播容器高度（px）                                             |\r\n| `interval`        | `number`                                                             | `1500`            | 否  | 自动播放间隔时间（毫秒）                                        |\r\n| `direction`       | `'next' \\| 'prev'`                                                   | `'next'`          | 否  | 自动播放方向                                                    |\r\n| `showButton`      | `boolean`                                                            | `true`            | 否  | 是否显示左右切换按钮                                             |\r\n\r\n---\r\n\r\n# Events 事件\r\n\r\n当前组件未显式定义自定义事件。\r\n\r\n---\r\n\r\n# Slots 插槽\r\n\r\n| 插槽名       | 说明           | 示例 |\r\n|-----------|--------------|------|\r\n| `default` | 轮播内容插槽，每个 `CarouselItem` 为一个轮播项 | —    |\r\n\r\n---\r\n\r\n# Expose 方法\r\n\r\n当前组件未暴露任何方法（未使用 `defineExpose`）。",
+        "displayPath": "/display/components/display/Carousel.vue"
     },
     {
         "category": "components/display",
