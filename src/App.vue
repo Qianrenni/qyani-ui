@@ -4,7 +4,7 @@
 import {ref} from 'vue'
 import ComponentList from "@/docs/ComponentList.vue";
 import ComponentDetail from "@/docs/ComponentDetail.vue";
-import {QIcon} from "qyani-components";
+import {QThemeToggle} from "qyani-components";
 
 const selected = ref<string | null>(null)
 </script>
@@ -12,7 +12,7 @@ const selected = ref<string | null>(null)
 <template>
   <div class="app-layout container-column">
     <div class="container container-flex-start padding-horizontal bg-image-header text-white ">
-      <QIcon :style="{'color':'white'}" icon="Wifi"/>
+      <q-theme-toggle/>
     </div>
     <div class="app-layout container-center">
       <ComponentList :selected="selected" @select="selected = $event"/>
@@ -29,6 +29,7 @@ const selected = ref<string | null>(null)
 }
 
 .app-layout {
+  width: 100vw;
   height: 100vh;
 }
 </style>

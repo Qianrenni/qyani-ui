@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/node": "^24.3.0",
-    "qyani-components": "^1.2.2",
+    "qyani-components": "1.2.3",
     "vue": "^3.5.18"
   },
   "devDependencies": {

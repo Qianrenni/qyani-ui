@@ -19,15 +19,6 @@ export const useComponentInfo:ComponentInfo[] = [
     },
     {
         "category": "components/basic",
-        "name": "IconGroups",
-        "displayName": "IconGroups",
-        "vuePath": "/src/components/basic/IconGroups.vue",
-        "docPath": "/docs/components/basic/IconGroups.md",
-        "docContent": "# Props 参数\r\n\r\n| 参数  | 类型   | 默认值 | 必填 | 说明     |\r\n|-------|--------|--------|------|----------|\r\n| `size` | `String` | `\"32\"` | 否   | 图标尺寸大小 |\r\n\r\n---\r\n\r\n# Events 事件\r\n\r\n暂无内容\r\n\r\n---\r\n\r\n# Slots 插槽\r\n\r\n暂无内容\r\n\r\n---\r\n\r\n# Expose 方法\r\n\r\n暂无内容",
-        "displayPath": "/display/components/basic/IconGroups.vue"
-    },
-    {
-        "category": "components/basic",
         "name": "Pagination",
         "displayName": "Pagination",
         "vuePath": "/src/components/basic/Pagination.vue",
@@ -52,15 +43,6 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/display/Badge.md",
         "docContent": "# Props 参数\r\n\r\n| 参数  | 类型                                                          | 默认值  | 必填 | 说明           |\r\n|-------|-------------------------------------------------------------|--------|----|----------------|\r\n| `type`  | `'primary' \\| 'success' \\| 'warning' \\| 'danger' \\| 'gray' \\| 'info'` | `'info'` | 否  | 徽章类型，影响颜色     |\r\n| `value` | `number \\| string`                                          | `1`    | 否  | 显示的值          |\r\n| `max`   | `number`                                                    | `99`   | 否  | 最大值，超过显示 `99+` |\r\n| `dot`   | `boolean`                                                   | `false`| 否  | 是否以小红点形式展示    |\r\n\r\n---\r\n\r\n# Events 事件\r\n\r\n当前组件未定义任何事件。\r\n\r\n---\r\n\r\n# Slots 插槽\r\n\r\n| 插槽名       | 说明         | 示例                     |\r\n|-----------|------------|--------------------------|\r\n| `default` | 默认插槽，用于包裹需要显示的内容 | `<template #default>内容</template>` |\r\n\r\n---\r\n\r\n# Expose 方法\r\n\r\n当前组件未暴露任何方法。",
         "displayPath": "/display/components/display/Badge.vue"
-    },
-    {
-        "category": "components/display",
-        "name": "Carousel",
-        "displayName": "Carousel",
-        "vuePath": "/src/components/display/Carousel.vue",
-        "docPath": "/docs/components/display/Carousel.md",
-        "docContent": "# Props 参数\r\n\r\n| 参数              | 类型                                                                 | 默认值              | 必填 | 说明                                                         |\r\n|-------------------|----------------------------------------------------------------------|-------------------|----|------------------------------------------------------------|\r\n| `vertical`        | `boolean`                                                            | `false`           | 否  | 是否垂直方向轮播                                               |\r\n| `autoplay`        | `boolean`                                                            | `true`            | 否  | 是否自动播放                                                   |\r\n| `duration`        | `number`                                                             | `500`             | 否  | 动画持续时间（毫秒）                                            |\r\n| `indicator`       | `boolean`                                                            | `true`            | 否  | 是否显示指示器                                                 |\r\n| `indicatorPosition` | `'center-bottom' \\| 'center-top' \\| 'left-bottom' \\| 'left-top' \\| 'left-center' \\| 'right-bottom' \\| 'right-top' \\| 'right-center'` | `'center-bottom'` | 否  | 指示器位置                                                    |\r\n| `width`           | `number`                                                             | —                 | 是  | 轮播容器宽度（px）                                             |\r\n| `height`          | `number`                                                             | —                 | 是  | 轮播容器高度（px）                                             |\r\n| `interval`        | `number`                                                             | `1500`            | 否  | 自动播放间隔时间（毫秒）                                        |\r\n| `direction`       | `'next' \\| 'prev'`                                                   | `'next'`          | 否  | 自动播放方向                                                    |\r\n| `showButton`      | `boolean`                                                            | `true`            | 否  | 是否显示左右切换按钮                                             |\r\n\r\n---\r\n\r\n# Events 事件\r\n\r\n当前组件未显式定义自定义事件。\r\n\r\n---\r\n\r\n# Slots 插槽\r\n\r\n| 插槽名       | 说明           | 示例 |\r\n|-----------|--------------|------|\r\n| `default` | 轮播内容插槽，每个 `CarouselItem` 为一个轮播项 | —    |\r\n\r\n---\r\n\r\n# Expose 方法\r\n\r\n当前组件未暴露任何方法（未使用 `defineExpose`）。",
-        "displayPath": "/display/components/display/Carousel.vue"
     },
     {
         "category": "components/display",
@@ -343,15 +325,6 @@ export const useComponentInfo:ComponentInfo[] = [
     },
     {
         "category": "events",
-        "name": "index",
-        "displayName": "index",
-        "vuePath": "/src/events/index.ts",
-        "docPath": "/docs/events/index.md",
-        "docContent": "# 暂无内容",
-        "displayPath": "/display/events/index.vue"
-    },
-    {
-        "category": "events",
         "name": "useDrag",
         "displayName": "useDrag",
         "vuePath": "/src/events/useDrag.ts",
@@ -376,60 +349,6 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/events/useMousePosition.md",
         "docContent": "# 暂无内容",
         "displayPath": "/display/events/useMousePosition.vue"
-    },
-    {
-        "category": "other",
-        "name": "index",
-        "displayName": "index",
-        "vuePath": "/src/index.ts",
-        "docPath": "/docs/index.md",
-        "docContent": "# 暂无内容",
-        "displayPath": "/display/index.vue"
-    },
-    {
-        "category": "template",
-        "name": "Api",
-        "displayName": "Api",
-        "vuePath": "/src/template/Api.ts",
-        "docPath": "/docs/template/Api.md",
-        "docContent": "# 暂无内容",
-        "displayPath": "/display/template/Api.vue"
-    },
-    {
-        "category": "types",
-        "name": "form",
-        "displayName": "form",
-        "vuePath": "/src/types/form.ts",
-        "docPath": "/docs/types/form.md",
-        "docContent": "# Props 参数\r\n\r\n| 参数         | 类型                                                          | 默认值         | 必填 | 说明                             |\r\n|--------------|---------------------------------------------------------------|----------------|------|----------------------------------|\r\n| `modelValue` | `T \\| null`                                                   | `undefined`    | 否   | 表单项绑定值（支持 null）        |\r\n| `name`       | `string`                                                      | `undefined`    | 否   | 表单项名称，用于表单提交         |\r\n| `label`      | `string`                                                      | `undefined`    | 否   | label 文本                       |\r\n| `disabled`   | `boolean`                                                     | `false`        | 否   | 是否禁用                           |\r\n| `readonly`   | `boolean`                                                     | `false`        | 否   | 是否只读                           |\r\n| `size`       | `'small' \\| 'middle' \\| 'large'`                              | `'middle'`     | 否   | 表单组件尺寸                       |\r\n| `status`     | `'default' \\| 'success' \\| 'warning' \\| 'error'`              | `undefined`    | 否   | 状态，用于边框颜色和校验反馈       |\r\n| `required`   | `boolean`                                                     | `false`        | 否   | 是否必填（显示红色星号提示）       |\r\n| `placeholder`| `string`                                                      | `undefined`    | 否   | 占位符文本                         |\r\n| `clearable`  | `boolean`                                                     | `false`        | 否   | 是否可清空，显示 × 按钮            |\r\n| `autofocus`  | `boolean`                                                     | `false`        | 否   | 是否自动聚焦                       |\r\n| `id`         | `string`                                                      | `undefined`    | 否   | 唯一标识，用于 label 关联和 a11y  |\r\n| `direction`  | `'vertical' \\| 'horizontal'`                                  | `'vertical'`   | 否   | 排列方向：竖向或横向               |\r\n| `errorMessage`| `string`                                                     | `undefined`    | 否   | 自定义错误信息                     |\r\n\r\n---\r\n\r\n# Events 事件\r\n\r\n| 事件名           | 回调参数                                      | 说明                         |\r\n|------------------|-----------------------------------------------|------------------------------|\r\n| `update:modelValue` | `(value: T): void`                          | 当绑定值变化时触发             |\r\n| `change`            | `(value: T): void`                          | 表单值发生变化时触发（可用于验证） |\r\n| `focus`             | `(event: FocusEvent): void`                 | 聚焦时触发                     |\r\n| `blur`              | `(event: FocusEvent): void`                 | 失焦时触发                     |\r\n| `input`             | `(value: T, event: InputEvent \\| Event): void` | 输入时触发                     |\r\n| `clear`             | `(): void`                                   | 清空操作时触发                 |\r\n\r\n---\r\n\r\n# Slots 插槽\r\n\r\n| 插槽名       | 说明                       | 示例                                               |\r\n|--------------|----------------------------|----------------------------------------------------|\r\n| `prefix`     | 自定义前缀图标/文本          | `<template #prefix=\"{ value }\">前缀内容</template>` |\r\n| `suffix`     | 自定义后缀图标/文本          | `<template #suffix=\"{ value }\">后缀内容</template>` |\r\n| `clear`      | 自定义清空按钮               | `<template #clear>自定义清空图标</template>`        |\r\n| `error`      | 自定义错误信息区域           | `<template #error=\"{ error }\">{{ error }}</template>` |\r\n| `default`    | 默认插槽，用于复杂内容定制     | `<template #default>自定义表单内容</template>`      |\r\n\r\n---\r\n\r\n# Expose 方法\r\n\r\n| 方法名 | 参数 | 返回值 | 说明 |\r\n|--------|------|--------|------|\r\n| 无     | —    | —      | 当前接口未定义任何需要暴露的方法 |",
-        "displayPath": "/display/types/form.vue"
-    },
-    {
-        "category": "types",
-        "name": "index",
-        "displayName": "index",
-        "vuePath": "/src/types/index.ts",
-        "docPath": "/docs/types/index.md",
-        "docContent": "# 暂无内容",
-        "displayPath": "/display/types/index.vue"
-    },
-    {
-        "category": "types",
-        "name": "Sql",
-        "displayName": "Sql",
-        "vuePath": "/src/types/Sql.ts",
-        "docPath": "/docs/types/Sql.md",
-        "docContent": "# Query Schema 文档\r\n\r\n## 类型定义\r\n\r\n### `SqlFieldType`\r\n\r\nSQL 字段类型，表示字段的数据类型。\r\n\r\n```ts\r\ntype SqlFieldType = 'string' | 'number' | 'boolean' | 'datetime'\r\n```\r\n\r\n### `SqlOperator`\r\n\r\nSQL 操作符，表示查询条件中的比较操作。\r\n\r\n```ts\r\ntype SqlOperator = 'between' | '=' | '!=' | '>' | '<' | '>=' | '<='\r\n```\r\n\r\n### `SqlValue`\r\n\r\nSQL 值的类型，支持多种基础类型和数组类型。\r\n\r\n```ts\r\ntype SqlValue = number | string | null | undefined | number[] | string[] | null[] | undefined[]\r\n```\r\n\r\n### `SqlField`\r\n\r\n描述一个 SQL 字段的基本信息。\r\n\r\n```ts\r\ntype SqlField = {\r\n  type: SqlFieldType\r\n  name: string\r\n  label: string\r\n  formatter?: (val: SqlValue) => SqlValue\r\n  isDefault?: boolean\r\n}\r\n```\r\n\r\n### `Condition`\r\n\r\n表示一个查询条件。\r\n\r\n```ts\r\ntype Condition = {\r\n  field: string\r\n  operator: SqlOperator | ''\r\n  value: SqlValue\r\n  type: keyof typeof SQL_FIELD_TYPES\r\n}\r\n```\r\n\r\n### `SqlRenderProps`\r\n\r\n用于渲染查询组件的属性接口。\r\n\r\n```ts\r\ninterface SqlRenderProps {\r\n  type: SqlFieldType\r\n  modelValue: SqlValue\r\n  'onUpdate:modelValue': (val: SqlValue) => void\r\n}\r\n```\r\n\r\n---\r\n\r\n## 常量定义\r\n\r\n### `SQL_FIELD_TYPES`\r\n\r\n字段类型与支持的操作符映射表。\r\n\r\n```ts\r\nexport const SQL_FIELD_TYPES: { [key in SqlFieldType]: { operators: SqlOperator[] } } = {\r\n  number: {\r\n    operators: ['=', '!=', '>', '<', '>=', '<=', 'between'],\r\n  },\r\n  string: {\r\n    operators: ['=', '!=', '>', '<', 'between'],\r\n  },\r\n  datetime: {\r\n    operators: ['between'],\r\n  },\r\n  boolean: {\r\n    operators: ['='],\r\n  },\r\n}\r\n```\r\n\r\n### `SQL_OPERATORS`\r\n\r\n操作符语义定义，包括标签和期望值类型。\r\n\r\n```ts\r\nexport const SQL_OPERATORS: { [key in SqlOperator]: Record<string, string> } = {\r\n  '=': { label: '等于', expects: 'single' },\r\n  '!=': { label: '不等于', expects: 'single' },\r\n  '>': { label: '大于', expects: 'single' },\r\n  '<': { label: '小于', expects: 'single' },\r\n  '>=': { label: '大于等于', expects: 'single' },\r\n  '<=': { label: '小于等于', expects: 'single' },\r\n  between: { label: '介于', expects: 'range' }, // 需要两个值\r\n}\r\n```\r\n\r\n### `SQL_TYPE_TO_COMPONENT`\r\n\r\n字段类型与 Vue 组件的映射关系。\r\n\r\n```ts\r\nexport const SQL_TYPE_TO_COMPONENT: Record<string, Component> = {\r\n  string: ElInput,\r\n  number: ElInputNumber,\r\n  boolean: ElSwitch,\r\n  datetime: ElDatePicker,\r\n}\r\n```\r\n\r\n---\r\n\r\n## 工具函数\r\n\r\n### `isArrayValue`\r\n\r\n判断值是否为合法的数组值（长度为 2 的数组）。\r\n\r\n```ts\r\nfunction isArrayValue(value: SqlValue): value is number[] | string[] | null[] | undefined[]\r\n```\r\n\r\n---\r\n\r\n## 操作符渲染函数\r\n\r\n### `SQL_OPERATOR_TO_COMPONENT`\r\n\r\n操作符到组件的映射表，用于动态渲染对应的输入组件。\r\n\r\n#### `'range'`\r\n\r\n处理范围操作符（如 `between`），根据字段类型渲染不同的输入组件：\r\n\r\n- `datetime`：渲染 `ElDatePicker`（`datetimerange` 类型）\r\n- `number`：两个 `ElInputNumber` 组成的范围输入\r\n- `string`：两个 `ElInput` 组成的范围输入\r\n\r\n#### `'list'`\r\n\r\n处理列表操作符（如 `in`），输入值以逗号分隔。\r\n\r\n#### `'single'`\r\n\r\n处理单值操作符（如 `=`, `>`），根据字段类型使用对应的组件：\r\n\r\n- `datetime`：使用 `ElDatePicker` 并设置 `type=\"datetime\"`\r\n- `boolean`：使用 `ElSwitch`\r\n- 其他：使用 `ElInput` 并带有默认占位符\r\n\r\n---\r\n\r\n## 示例说明\r\n\r\n### 渲染一个 `number` 类型的 `between` 查询条件\r\n\r\n```ts\r\nconst props = {\r\n  type: 'number',\r\n  modelValue: [10, 20],\r\n  'onUpdate:modelValue': (val) => console.log(val),\r\n}\r\nconst rangeComponent = SQL_OPERATOR_TO_COMPONENT.range(props)\r\n```\r\n\r\n### 渲染一个 `string` 类型的 `=` 查询条件\r\n\r\n```ts\r\nconst props = {\r\n  type: 'string',\r\n  modelValue: 'test',\r\n  'onUpdate:modelValue': (val) => console.log(val),\r\n}\r\nconst singleComponent = SQL_OPERATOR_TO_COMPONENT.single(props)\r\n```\r\n\r\n### 渲染一个 `datetime` 类型的 `between` 查询条件\r\n\r\n```ts\r\nconst props = {\r\n  type: 'datetime',\r\n  modelValue: ['2023-01-01', '2023-12-31'],\r\n  'onUpdate:modelValue': (val) => console.log(val),\r\n}\r\nconst rangeComponent = SQL_OPERATOR_TO_COMPONENT.range(props)\r\n```\r\n\r\n---\r\n\r\n## 用法建议\r\n\r\n### 动态渲染查询条件组件\r\n\r\n```ts\r\nfunction renderCondition(field: SqlField, condition: Condition) {\r\n  const operatorDef = SQL_OPERATORS[condition.operator]\r\n  const renderer = SQL_OPERATOR_TO_COMPONENT[operatorDef.expects]\r\n  return renderer({\r\n    type: field.type,\r\n    modelValue: condition.value,\r\n    'onUpdate:modelValue': (val) => updateConditionValue(condition, val),\r\n  })\r\n}\r\n```\r\n\r\n### 字段类型与组件映射\r\n\r\n```ts\r\nfunction getComponentForFieldType(type: SqlFieldType): Component {\r\n  return SQL_TYPE_TO_COMPONENT[type] || ElInput\r\n}\r\n```\r\n\r\n### 判断值是否为合法范围\r\n\r\n```ts\r\nif (isArrayValue(condition.value)) {\r\n  // 处理范围值\r\n}\r\n```\r\n\r\n---\r\n\r\n## 注意事项\r\n\r\n- `SQL_OPERATOR_TO_COMPONENT` 中的渲染函数依赖 Vue 的 `h` 函数，需在组件上下文中使用。\r\n- `modelValue` 和 `onUpdate:modelValue` 是响应式绑定的关键，需确保正确传递。\r\n- `formatter` 字段可用于在显示或提交前格式化字段值。\r\n- `SQL_OPERATORS` 支持扩展，可添加 `in`、`contains` 等操作符。\r\n\r\n---\r\n\r\n## 推荐学习路径\r\n\r\n1. **Vue Composition API**：理解 `h` 函数、组件动态渲染、响应式数据绑定。\r\n2. **TypeScript 泛型与映射类型**：掌握 `key in SqlFieldType`、`Record<string, T>` 等高级类型用法。\r\n3. **Element Plus 组件库**：熟悉 `ElInput`, `ElInputNumber`, `ElDatePicker`, `ElSwitch` 等组件的使用。\r\n4. **SQL 查询构建原理**：了解如何将用户输入转换为 SQL 查询条件。",
-        "displayPath": "/display/types/Sql.vue"
-    },
-    {
-        "category": "utils",
-        "name": "index",
-        "displayName": "index",
-        "vuePath": "/src/utils/index.ts",
-        "docPath": "/docs/utils/index.md",
-        "docContent": "# 暂无内容",
-        "displayPath": "/display/utils/index.vue"
     },
     {
         "category": "utils",
