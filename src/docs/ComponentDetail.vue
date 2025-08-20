@@ -98,8 +98,10 @@ const currentTabIndex = ref<number>(0);
 const currentCotent = ref('')
 watch(
     () => props.component,
-    async (newComponent: ComponentInfo) => {
-       currentCotent.value = await (await fetch(newComponent.docPath)).text();
+    async (newComponent: ComponentInfo | null) => {
+        if (newComponent) {
+            currentCotent.value = await (await fetch(newComponent.docPath)).text();
+        }
     }
 )
 </script>

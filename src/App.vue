@@ -5,8 +5,8 @@ import {ref} from 'vue'
 import ComponentList from "@/docs/ComponentList.vue";
 import ComponentDetail from "@/docs/ComponentDetail.vue";
 import {QThemeToggle} from "qyani-components";
-
-const selected = ref<string | null>(null)
+import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
+const selected = ref<ComponentInfo | null>(null)
 </script>
 
 <template>

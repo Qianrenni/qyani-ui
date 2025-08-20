@@ -14,7 +14,7 @@ const code = `
 <template>
   <DemoBlock :code>
     <div class="container">
-      <QTab :list="['栏目1','栏目2','栏目3']" @select="(index)=>console.log(index)"/>
+      <QTab :list="['栏目1','栏目2','栏目3']" @select="(index:number)=>console.log(index)"/>
     </div>
   </DemoBlock>
 </template>

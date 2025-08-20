@@ -46,7 +46,7 @@ const content = {
     }
   ]
 }
-const handleSelect = (section) => {
+const handleSelect = (section:Record<string, string>) => {
   alert(JSON.stringify(section));
 }
 const code = `
@@ -103,7 +103,7 @@ const content = {
 </script>
 <template>
   <DemoBlock :code="code">
-    <QNavSection :sections="content.children" :title="content.title" @select="(e)=>handleSelect(e)"/>
+    <QNavSection :sections="content.children" :title="content.title" @select="handleSelect"/>
   </DemoBlock>
 </template>
 

@@ -12,8 +12,8 @@ importers:
         specifier: ^24.3.0
         version: 24.3.0
       qyani-components:
-        specifier: ^1.2.3
-        version: 1.2.3(vue@3.5.18(typescript@5.8.3))
+        specifier: ^1.2.4
+        version: 1.2.4(vue@3.5.18(typescript@5.8.3))
       vue:
         specifier: ^3.5.18
         version: 3.5.18(typescript@5.8.3)
@@ -452,8 +452,8 @@ packages:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  qyani-components@1.2.3:
-    resolution: {integrity: sha512-dVpRphJ0uy7yVC2KNQuaZLljdTMitdwQgxr0fIyBIZJmcfRM/cxfAuMvV/tfbL7MV3t50skowF45DhWNq5CMJA==}
+  qyani-components@1.2.4:
+    resolution: {integrity: sha512-FM6GMhhBY1DT64SDyYHhwPsqy84emWV4ySyPCMZNZd/WjYzNPk8y0xTAWbIxKMjA3muoCUkqAbQa1I5VFnb1yQ==}
     peerDependencies:
       vue: ^3.5.18
 
@@ -861,7 +861,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  qyani-components@1.2.3(vue@3.5.18(typescript@5.8.3)):
+  qyani-components@1.2.4(vue@3.5.18(typescript@5.8.3)):
     dependencies:
       vue: 3.5.18(typescript@5.8.3)
 
