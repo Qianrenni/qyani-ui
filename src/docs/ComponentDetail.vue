@@ -114,12 +114,12 @@ watch(
   <div v-else class=" bg-card component-detail container-column scroll-container scroll-y">
     <div class="container-column padding-rem container-flex-1">
       <!-- 右侧标题 -->
-      <h2 class="text-primary text-center padding-half-rem margin-half-vetical border-horizontal-gray">
+      <h2 class="text-primary text-center  margin-half-vetical border-horizontal-gray">
         {{ component.displayName }} 组件
       </h2>
       <QTab :list="['文档说明', '组件展示']" @select="(index:number)=>currentTabIndex=index"/>
       <!-- 组件展示区 -->
-      <div v-show="currentTabIndex===0" class="component-display padding-rem radius-half-rem shadow-black">
+      <div v-show="currentTabIndex===0" class="component-display padding-rem radius-half-rem shadow-black scroll-container scroll-y scroll-x">
         <!-- Markdown 文档 -->
         <QMarkdownRender :content="currentCotent"/>
       </div>
@@ -159,5 +159,11 @@ watch(
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .component-detail{
+    height: auto;
+  }
+
 }
 </style>
