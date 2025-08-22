@@ -1,3 +1,4 @@
+
 export interface ComponentInfo{
     category:string,
     name:string,
@@ -178,6 +179,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "Card",
         "category": "/components/layout/",
         "docPath": "/docs/components/layout/Card.md"
+    },
+    {
+        "name": "Collapse",
+        "displayName": "Collapse",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/Collapse.md"
     },
     {
         "name": "CollapsibleSection",

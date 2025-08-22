@@ -30,6 +30,7 @@ import FormText from '../display/components/form/FormText.vue'
 import FormTextarea from '../display/components/form/FormTextarea.vue'
 import Search from '../display/components/form/Search.vue'
 import Card from '../display/components/layout/Card.vue'
+import Collapse from '../display/components/layout/Collapse.vue'
 import CollapsibleSection from '../display/components/layout/CollapsibleSection.vue'
 import ScrollContainer from '../display/components/layout/ScrollContainer.vue'
 import NavSection from '../display/components/navigation/NavSection.vue'
@@ -79,6 +80,7 @@ const componentMap ={
   'FormTextarea':FormTextarea,
   'Search':Search,
   'Card':Card,
+  'Collapse':Collapse,
   'CollapsibleSection':CollapsibleSection,
   'ScrollContainer':ScrollContainer,
   'NavSection':NavSection,

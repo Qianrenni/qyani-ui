@@ -1,7 +1,7 @@
 import os
 import re
 
-dir_path = r'D:\webstorm\workdir\qyani-ui-docs\src\display'
+dir_path = r'F:\eclipse\worakjava\qyani-ui-docs\src\display'
 result = []
 install_list = []
 components = []

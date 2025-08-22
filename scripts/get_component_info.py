@@ -1,8 +1,17 @@
 import json
 import  os
 
-src_dir = r'D:\webstorm\workdir\qyani-ui-docs\src\display'
+src_dir = r'F:\eclipse\worakjava\qyani-ui-docs\src\display'
+out_file = r'F:\eclipse\worakjava\qyani-ui-docs\src\utils\useComponentInfo.ts'
 result = []
+prefixFileContent ="""
+export interface ComponentInfo{
+    category:string,
+    name:string,
+    displayName:string,
+    docPath:string,
+}
+export const useComponentInfo:ComponentInfo[] = """
 for root, dirs, files in os.walk(src_dir):
     for file in files:
         full_path = os.path.join(root, file)
@@ -16,5 +25,6 @@ for root, dirs, files in os.walk(src_dir):
             "category": category,
             "docPath": docPath,
         })
-
-print(json.dumps(result, indent=4))
+with open(out_file, 'w', encoding='utf-8') as f:
+    suffix= json.dumps(result,indent=4)
+    f.write(prefixFileContent+suffix)
