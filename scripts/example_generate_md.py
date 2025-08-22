@@ -49,7 +49,12 @@ def get_system_prompt(file_path='system_prompt.json', type='soft'):
     # 返回指定类型的提示内容
     return system_prompt[type]
 
-def rpc(model='qwen-plus',system_prompt=None, message='请你自我介绍'):
+
+def get_example_md(file_path=r'.example.md.txt'):
+    return read_file(file_path)
+
+
+def rpc(system_prompt='', message='请你自我介绍'):
     import dashscope
     import os
     messages = [
@@ -59,7 +64,7 @@ def rpc(model='qwen-plus',system_prompt=None, message='请你自我介绍'):
     response = dashscope.Generation.call(
         # 若没有配置环境变量，请用百炼API Key将下行替换为：api_key="sk-xxx",
         api_key=os.getenv('DASHSCOPE_API_KEY'),
-        model=model,
+        model="qwen-flash",
         # 此处以qwen-plus为例，可按需更换模型名称。模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
         messages=messages,
         result_format='message'
@@ -85,44 +90,50 @@ def validate_file(file_path):
         print(f'已创建文件：{file_path}')
 
 
-target_display_path = r'D:/webstorm/workdir/qyani-ui-docs/src/display'
-target_docs_path = r'D:/webstorm/workdir/qyani-ui-docs/public/docs'
-src_vue_path = r'D:/webstorm/workdir/vue-elements/src'
+target_display_path = r'F:/eclipse/worakjava/qyani-ui-docs/src/display'
+target_docs_path = r'F:/eclipse/worakjava/qyani-ui-docs/public/docs'
+src_vue_path = r'F:/eclipse/worakjava/qyani-components/src'
 
-def main():
-    system_prompt = get_system_prompt(type='strict')
-    example_md = read_file('.example.md.txt')
-    example_vue = read_file('.example.vue.txt')
-    for root, dirs, files in os.walk(src_vue_path):
-        for file in files:
-            full_path = os.path.join(root, file)
-            if filter_file(full_path):
-                continue
-            docs_path = (full_path
-                         .replace(src_vue_path, target_docs_path)
-                         .replace('\\', '/')
-                         .replace('.vue', '.md')
-                         .replace('.ts', '.md'))
-            display_path = (full_path
-                            .replace(src_vue_path, target_display_path)
-                            .replace('\\', '/')
-                            .replace('.ts', '.vue')
-                            )
-            validate_file(docs_path)
-            validate_file(display_path)
-            src_content = read_file(full_path)
-            if os.path.getsize(docs_path) == 0:
-                message = f'阅读下面这个vue文件或者ts文件内容${src_content},并按照我给你的md模板${example_md}生成对应的文档,如何你阅读着是一个ts文件,那么你就不需要按照模板生成说明而是说明函数,类,参数,返回值,Expose的方法必须是有defineExpose定义的否则没有,' \
-                          f'如果你觉得这个模板与当前的文件内容不太匹配你可以自我发挥,' \
-                          f'不要有你自己的解释多余的话'
-                result = rpc(model='qwen-plus',system_prompt=system_prompt, message=message)
-                write_file(docs_path, result)
-                print(f'为{docs_path}添加文档说明')
-            if os.path.getsize(display_path) == 0:
-                message = f'阅读下面这个vue文件或者ts文件内容${src_content},并按照我给你的vue模板${example_vue}生成对应的vue文件,所有除了与vue相关的的导入其他的都是都是from "qyani-components"的命名导入'
-                result = rpc(model='qwen-plus',system_prompt=system_prompt, message=message)
-                write_file(display_path, result)
-                print(f'为{display_path}添加vue文件')
+for root, dirs, files in os.walk(src_vue_path):
+    for file in files:
+        full_path = os.path.join(root, file)
+        if filter_file(full_path):
+            continue
+        docs_path = (full_path
+                     .replace(src_vue_path, target_docs_path)
+                     .replace('\\', '/')
+                     .replace('.vue', '.md')
+                     .replace('.ts', '.md'))
+        display_path = (full_path
+                        .replace(src_vue_path, target_display_path)
+                        .replace('\\', '/')
+                        .replace('.ts', '.vue')
+                        )
+        validate_file(docs_path)
+        validate_file(display_path)
 
-if __name__ == '__main__':
-    main()
+# def main():
+#     system_prompt = get_system_prompt()
+#     example_md = get_example_md()
+#     for root, dirs, files in os.walk(src_path):
+#         for file in files:
+#             if file.endswith('.vue') or file.endswith('.ts'):
+#                 file_path = os.path.join(root, file).replace('\\', '/')
+#                 out_path = file_path.replace('src', 'docs').replace('.vue', '.md').replace('.ts', '.md')
+#                 print(f'正在处理文件：{file_path} 输出文件：{out_path}')
+#                 if os.path.exists(out_path) and os.path.getsize(out_path) > 0:
+#                     pass
+#                 else:
+#                     if not os.path.exists(out_path):
+#                         write_file(out_path, '')
+#                 content = read_file(file_path)
+#                 message = f'阅读下面这个vue文件或者ts文件内容${content},并按照我给你的md模板${example_md}生成对应的文档,Expose的方法必须是有defineExpose定义的否则没有,' \
+#                           f'如果你觉得这个模板与当前的文件内容不太匹配你可以自我发挥,如果文件内容是类似于index.ts这种导入导出的那么你可以返回一个# 暂无内容,全部的返回内容不要有任何的附加语言,直接是一个md内容,' \
+#                           f'不要有你自己的解释'
+#                 result = rpc(system_prompt, message)
+#                 write_file(out_path, result)
+#                 print(f'处理完成：{file_path}')
+#
+#
+# if __name__ == '__main__':
+#     main()
