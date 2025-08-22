@@ -44,9 +44,14 @@ import useLRUCache from '../display/utils/useLRUCache.vue'
 import useMemoryCache from '../display/utils/useMemoryCache.vue'
 import useThrottle from '../display/utils/useThrottle.vue'
 import useTime from '../display/utils/useTime.vue'
+import useTimeDisplay from "@/display/utils/useTimeDisplay.vue";
+import useMessage from "@/display/utils/useMessage.vue";
+import FormSwitch from "@/display/components/form/FormSwitch.vue";
+import Message from "@/display/components/basic/Message.vue";
 
 const componentMap ={
   'Icon':Icon,
+  'Message':Message,
   'Pagination':Pagination,
   'Avatar':Avatar,
   'Badge':Badge,
@@ -68,6 +73,7 @@ const componentMap ={
   'FormRadioGroup':FormRadioGroup,
   'FormRangeSlider':FormRangeSlider,
   'FormSelect':FormSelect,
+  'FormSwitch':FormSwitch,
   'FormTable':FormTable,
   'FormText':FormText,
   'FormTextarea':FormTextarea,
@@ -85,8 +91,11 @@ const componentMap ={
   'useDebounce':useDebounce,
   'useLRUCache':useLRUCache,
   'useMemoryCache':useMemoryCache,
+  'useMessage':useMessage,
   'useThrottle':useThrottle,
   'useTime':useTime,
+  'useTimeDisplay':useTimeDisplay
+
 }
 defineOptions({
   name: 'ComponentDetail'
