@@ -187,16 +187,40 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/layout/Collapse.md"
     },
     {
+        "name": "CollapseItem",
+        "displayName": "CollapseItem",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/CollapseItem.md"
+    },
+    {
         "name": "CollapsibleSection",
         "displayName": "CollapsibleSection",
         "category": "/components/layout/",
         "docPath": "/docs/components/layout/CollapsibleSection.md"
     },
     {
+        "name": "Dialog",
+        "displayName": "Dialog",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/Dialog.md"
+    },
+    {
         "name": "ScrollContainer",
         "displayName": "ScrollContainer",
         "category": "/components/layout/",
         "docPath": "/docs/components/layout/ScrollContainer.md"
+    },
+    {
+        "name": "Tree",
+        "displayName": "Tree",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/Tree.md"
+    },
+    {
+        "name": "TreeNode",
+        "displayName": "TreeNode",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/TreeNode.md"
     },
     {
         "name": "NavSection",
@@ -223,12 +247,6 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/theme/ThemeToggle.md"
     },
     {
-        "name": "index",
-        "displayName": "index",
-        "category": "/events/",
-        "docPath": "/docs/events/index.md"
-    },
-    {
         "name": "useDrag",
         "displayName": "useDrag",
         "category": "/events/",
@@ -245,12 +263,6 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "useMousePosition",
         "category": "/events/",
         "docPath": "/docs/events/useMousePosition.md"
-    },
-    {
-        "name": "index",
-        "displayName": "index",
-        "category": "/utils/",
-        "docPath": "/docs/utils/index.md"
     },
     {
         "name": "useDebounce",

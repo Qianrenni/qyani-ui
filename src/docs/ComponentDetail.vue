@@ -1,9 +1,11 @@
+
 <!-- src/docs/ComponentDetail.vue -->
 <script lang="ts" setup>
 import {defineOptions, ref, watch} from 'vue'
 import {QMarkdownRender, QTab} from "qyani-components";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
 import Icon from '../display/components/basic/Icon.vue'
+import Message from '../display/components/basic/Message.vue'
 import Pagination from '../display/components/basic/Pagination.vue'
 import Avatar from '../display/components/display/Avatar.vue'
 import Badge from '../display/components/display/Badge.vue'
@@ -25,14 +27,19 @@ import FormFileUpload from '../display/components/form/FormFileUpload.vue'
 import FormRadioGroup from '../display/components/form/FormRadioGroup.vue'
 import FormRangeSlider from '../display/components/form/FormRangeSlider.vue'
 import FormSelect from '../display/components/form/FormSelect.vue'
+import FormSwitch from '../display/components/form/FormSwitch.vue'
 import FormTable from '../display/components/form/FormTable.vue'
 import FormText from '../display/components/form/FormText.vue'
 import FormTextarea from '../display/components/form/FormTextarea.vue'
 import Search from '../display/components/form/Search.vue'
 import Card from '../display/components/layout/Card.vue'
 import Collapse from '../display/components/layout/Collapse.vue'
+import CollapseItem from '../display/components/layout/CollapseItem.vue'
 import CollapsibleSection from '../display/components/layout/CollapsibleSection.vue'
+import Dialog from '../display/components/layout/Dialog.vue'
 import ScrollContainer from '../display/components/layout/ScrollContainer.vue'
+import Tree from '../display/components/layout/Tree.vue'
+import TreeNode from '../display/components/layout/TreeNode.vue'
 import NavSection from '../display/components/navigation/NavSection.vue'
 import Tab from '../display/components/navigation/Tab.vue'
 import ConditionSelect from '../display/components/Sql/ConditionSelect.vue'
@@ -43,62 +50,63 @@ import useMousePosition from '../display/events/useMousePosition.vue'
 import useDebounce from '../display/utils/useDebounce.vue'
 import useLRUCache from '../display/utils/useLRUCache.vue'
 import useMemoryCache from '../display/utils/useMemoryCache.vue'
+import useMessage from '../display/utils/useMessage.vue'
 import useThrottle from '../display/utils/useThrottle.vue'
 import useTime from '../display/utils/useTime.vue'
-import useTimeDisplay from "@/display/utils/useTimeDisplay.vue";
-import useMessage from "@/display/utils/useMessage.vue";
-import FormSwitch from "@/display/components/form/FormSwitch.vue";
-import Message from "@/display/components/basic/Message.vue";
-
+import useTimeDisplay from '../display/utils/useTimeDisplay.vue'
 const componentMap ={
-  'Icon':Icon,
-  'Message':Message,
-  'Pagination':Pagination,
-  'Avatar':Avatar,
-  'Badge':Badge,
-  'Carousel':Carousel,
-  'CarouselItem':CarouselItem,
-  'Divider':Divider,
-  'MarkdownRender':MarkdownRender,
-  'MobileFrame':MobileFrame,
-  'ProgressBar':ProgressBar,
-  'RainFigure':RainFigure,
-  'ScrollNotice':ScrollNotice,
-  'FormButton':FormButton,
-  'FormCheckboxGroup':FormCheckboxGroup,
-  'FormColorPicker':FormColorPicker,
-  'FormContainer':FormContainer,
-  'FormDatalist':FormDatalist,
-  'FormDatePicker':FormDatePicker,
-  'FormFileUpload':FormFileUpload,
-  'FormRadioGroup':FormRadioGroup,
-  'FormRangeSlider':FormRangeSlider,
-  'FormSelect':FormSelect,
-  'FormSwitch':FormSwitch,
-  'FormTable':FormTable,
-  'FormText':FormText,
-  'FormTextarea':FormTextarea,
-  'Search':Search,
-  'Card':Card,
-  'Collapse':Collapse,
-  'CollapsibleSection':CollapsibleSection,
-  'ScrollContainer':ScrollContainer,
-  'NavSection':NavSection,
-  'Tab':Tab,
-  'ConditionSelect':ConditionSelect,
-  'ThemeToggle':ThemeToggle,
-  'useDrag':useDrag,
-  'useFormEvents':useFormEvents,
-  'useMousePosition':useMousePosition,
-  'useDebounce':useDebounce,
-  'useLRUCache':useLRUCache,
-  'useMemoryCache':useMemoryCache,
-  'useMessage':useMessage,
-  'useThrottle':useThrottle,
-  'useTime':useTime,
-  'useTimeDisplay':useTimeDisplay
-
+	'Icon':Icon,
+	'Message':Message,
+	'Pagination':Pagination,
+	'Avatar':Avatar,
+	'Badge':Badge,
+	'Carousel':Carousel,
+	'CarouselItem':CarouselItem,
+	'Divider':Divider,
+	'MarkdownRender':MarkdownRender,
+	'MobileFrame':MobileFrame,
+	'ProgressBar':ProgressBar,
+	'RainFigure':RainFigure,
+	'ScrollNotice':ScrollNotice,
+	'FormButton':FormButton,
+	'FormCheckboxGroup':FormCheckboxGroup,
+	'FormColorPicker':FormColorPicker,
+	'FormContainer':FormContainer,
+	'FormDatalist':FormDatalist,
+	'FormDatePicker':FormDatePicker,
+	'FormFileUpload':FormFileUpload,
+	'FormRadioGroup':FormRadioGroup,
+	'FormRangeSlider':FormRangeSlider,
+	'FormSelect':FormSelect,
+	'FormSwitch':FormSwitch,
+	'FormTable':FormTable,
+	'FormText':FormText,
+	'FormTextarea':FormTextarea,
+	'Search':Search,
+	'Card':Card,
+	'Collapse':Collapse,
+	'CollapseItem':CollapseItem,
+	'CollapsibleSection':CollapsibleSection,
+	'Dialog':Dialog,
+	'ScrollContainer':ScrollContainer,
+	'Tree':Tree,
+	'TreeNode':TreeNode,
+	'NavSection':NavSection,
+	'Tab':Tab,
+	'ConditionSelect':ConditionSelect,
+	'ThemeToggle':ThemeToggle,
+	'useDrag':useDrag,
+	'useFormEvents':useFormEvents,
+	'useMousePosition':useMousePosition,
+	'useDebounce':useDebounce,
+	'useLRUCache':useLRUCache,
+	'useMemoryCache':useMemoryCache,
+	'useMessage':useMessage,
+	'useThrottle':useThrottle,
+	'useTime':useTime,
+	'useTimeDisplay':useTimeDisplay
 }
+
 defineOptions({
   name: 'ComponentDetail'
 })

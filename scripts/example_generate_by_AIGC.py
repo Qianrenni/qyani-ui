@@ -36,7 +36,7 @@ def write_file(file_path, content, mode='w', encoding='utf-8'):
             f.write(content)
 
 
-def get_system_prompt(file_path='system_prompt.json', type='soft'):
+def get_system_prompt(file_path='scripts/system_prompt.json', type='soft'):
     """
     从指定文件中读取系统提示信息并返回指定类型的提示内容
 
@@ -85,14 +85,14 @@ def validate_file(file_path):
         print(f'已创建文件：{file_path}')
 
 
-target_display_path = r'D:/webstorm/workdir/qyani-ui-docs/src/display'
-target_docs_path = r'D:/webstorm/workdir/qyani-ui-docs/public/docs'
-src_vue_path = r'D:/webstorm/workdir/vue-elements/src'
+target_display_path = r'F:\eclipse\worakjava\qyani-ui-docs\src\display'
+target_docs_path = r'F:\eclipse\worakjava\qyani-ui-docs\public\docs'
+src_vue_path = r'F:\eclipse\worakjava\qyani-components\src'
 
 def main():
     system_prompt = get_system_prompt(type='strict')
-    example_md = read_file('.example.md.txt')
-    example_vue = read_file('.example.vue.txt')
+    example_md = read_file('scripts/example.md.txt')
+    example_vue = read_file('scripts/example.vue.txt')
     for root, dirs, files in os.walk(src_vue_path):
         for file in files:
             full_path = os.path.join(root, file)
