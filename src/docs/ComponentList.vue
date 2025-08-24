@@ -83,4 +83,13 @@ const grouped = computed(() => {
 .fade-leave-to {
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .component-list{
+    position:sticky;
+    bottom: 0;
+    width: 100%;
+    max-height: 30vh;
+
+  }
+}
 </style>
