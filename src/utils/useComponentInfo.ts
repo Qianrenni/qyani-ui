@@ -205,6 +205,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/layout/Dialog.md"
     },
     {
+        "name": "Drawer",
+        "displayName": "Drawer",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/Drawer.md"
+    },
+    {
         "name": "ScrollContainer",
         "displayName": "ScrollContainer",
         "category": "/components/layout/",

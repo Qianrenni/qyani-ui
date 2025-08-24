@@ -37,6 +37,7 @@ import Collapse from '../display/components/layout/Collapse.vue'
 import CollapseItem from '../display/components/layout/CollapseItem.vue'
 import CollapsibleSection from '../display/components/layout/CollapsibleSection.vue'
 import Dialog from '../display/components/layout/Dialog.vue'
+import Drawer from '../display/components/layout/Drawer.vue'
 import ScrollContainer from '../display/components/layout/ScrollContainer.vue'
 import Tree from '../display/components/layout/Tree.vue'
 import TreeNode from '../display/components/layout/TreeNode.vue'
@@ -88,6 +89,7 @@ const componentMap ={
 	'CollapseItem':CollapseItem,
 	'CollapsibleSection':CollapsibleSection,
 	'Dialog':Dialog,
+	'Drawer':Drawer,
 	'ScrollContainer':ScrollContainer,
 	'Tree':Tree,
 	'TreeNode':TreeNode,
