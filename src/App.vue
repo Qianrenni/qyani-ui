@@ -24,7 +24,7 @@ onUnmounted(() => {
 <template>
   <div class="app-layout container-column">
     <div class="container container-flex-start padding-horizontal bg-image-header text-white ">
-      <q-theme-toggle/>
+      <q-theme-toggle :size="32"/>
     </div>
     <div class="app-layout container-center">
       <QCollapsibleSection :isShowArrow="showArrow" :direction="showArrow?'up':'down'">
