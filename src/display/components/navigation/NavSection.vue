@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QNavSection} from "qyani-components";
+import  {QNavSection} from "qyani-components";
 
 const content = {
   title: '标题1',
@@ -46,7 +46,7 @@ const content = {
     }
   ]
 }
-const handleSelect = (section:Record<string, string>) => {
+const handleSelect = (section:any) => {
   alert(JSON.stringify(section));
 }
 const code = `
