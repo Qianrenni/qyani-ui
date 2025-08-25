@@ -1,7 +1,7 @@
 <template>
   <DemoBlock :code="code">
     <div class="container-w100">
-      <div class="container-center container-align-center">
+      <div class="container-center container-align-center container-wrap">
         <QFormSwitch v-model="showDrawer.right" label="右侧抽屉"/>
         <QFormSwitch v-model="showDrawer.left" label="左侧抽屉"/>
         <QFormSwitch v-model="showDrawer.top" label="顶部抽屉"/>
