@@ -72,7 +72,7 @@ def rpc(model='qwen-plus',system_prompt=None, message='请你自我介绍'):
 
 def filter_file(file_path, ignore_fields=None):
     if ignore_fields is None:
-        ignore_fields = ['Sql', 'types', 'style', 'scripts', 'index', 'DemoBlock']
+        ignore_fields = ['Sql', 'types', 'style', 'scripts', 'index', 'DemoBlock','main']
     if any(field in file_path for field in ignore_fields):
         return True
 

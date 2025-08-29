@@ -7,6 +7,8 @@ import ComponentDetail from "@/docs/ComponentDetail.vue";
 import {QThemeToggle} from "qyani-components";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
 import {QCollapsibleSection} from "qyani-components";
+import {useFollowSystemTheme} from "qyani-components";
+useFollowSystemTheme();
 const selected = ref<ComponentInfo | null>(null)
 const showArrow = ref(false);
 const resizeHandler = ()=>{
@@ -28,7 +30,7 @@ onUnmounted(() => {
     </div>
     <div class="app-layout container-center">
       <QCollapsibleSection :isShowArrow="showArrow" :direction="showArrow?'up':'down'">
-        <ComponentList  :selected="selected" @select="selected = $event"/>
+        <ComponentList  :selected="selected" @select="(comp)=>selected=comp"/>
       </QCollapsibleSection>
       <ComponentDetail :component="selected"/>
     </div>

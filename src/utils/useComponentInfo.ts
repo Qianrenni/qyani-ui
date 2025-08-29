@@ -55,6 +55,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/display/Divider.md"
     },
     {
+        "name": "LazyImage",
+        "displayName": "LazyImage",
+        "category": "/components/display/",
+        "docPath": "/docs/components/display/LazyImage.md"
+    },
+    {
         "name": "MarkdownRender",
         "displayName": "MarkdownRender",
         "category": "/components/display/",
@@ -83,6 +89,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "ScrollNotice",
         "category": "/components/display/",
         "docPath": "/docs/components/display/ScrollNotice.md"
+    },
+    {
+        "name": "VirtualList",
+        "displayName": "VirtualList",
+        "category": "/components/display/",
+        "docPath": "/docs/components/display/VirtualList.md"
     },
     {
         "name": "FormButton",
@@ -275,6 +287,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "useDebounce",
         "category": "/utils/",
         "docPath": "/docs/utils/useDebounce.md"
+    },
+    {
+        "name": "useFollowSystemTheme",
+        "displayName": "useFollowSystemTheme",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useFollowSystemTheme.md"
     },
     {
         "name": "useLRUCache",

@@ -12,11 +12,13 @@ import Badge from '../display/components/display/Badge.vue'
 import Carousel from '../display/components/display/Carousel.vue'
 import CarouselItem from '../display/components/display/CarouselItem.vue'
 import Divider from '../display/components/display/Divider.vue'
+import LazyImage from '../display/components/display/LazyImage.vue'
 import MarkdownRender from '../display/components/display/MarkdownRender.vue'
 import MobileFrame from '../display/components/display/MobileFrame.vue'
 import ProgressBar from '../display/components/display/ProgressBar.vue'
 import RainFigure from '../display/components/display/RainFigure.vue'
 import ScrollNotice from '../display/components/display/ScrollNotice.vue'
+import VirtualList from '../display/components/display/VirtualList.vue'
 import FormButton from '../display/components/form/FormButton.vue'
 import FormCheckboxGroup from '../display/components/form/FormCheckboxGroup.vue'
 import FormColorPicker from '../display/components/form/FormColorPicker.vue'
@@ -49,6 +51,7 @@ import useDrag from '../display/events/useDrag.vue'
 import useFormEvents from '../display/events/useFormEvents.vue'
 import useMousePosition from '../display/events/useMousePosition.vue'
 import useDebounce from '../display/utils/useDebounce.vue'
+import useFollowSystemTheme from '../display/utils/useFollowSystemTheme.vue'
 import useLRUCache from '../display/utils/useLRUCache.vue'
 import useMemoryCache from '../display/utils/useMemoryCache.vue'
 import useMessage from '../display/utils/useMessage.vue'
@@ -64,11 +67,13 @@ const componentMap ={
 	'Carousel':Carousel,
 	'CarouselItem':CarouselItem,
 	'Divider':Divider,
+	'LazyImage':LazyImage,
 	'MarkdownRender':MarkdownRender,
 	'MobileFrame':MobileFrame,
 	'ProgressBar':ProgressBar,
 	'RainFigure':RainFigure,
 	'ScrollNotice':ScrollNotice,
+	'VirtualList':VirtualList,
 	'FormButton':FormButton,
 	'FormCheckboxGroup':FormCheckboxGroup,
 	'FormColorPicker':FormColorPicker,
@@ -101,6 +106,7 @@ const componentMap ={
 	'useFormEvents':useFormEvents,
 	'useMousePosition':useMousePosition,
 	'useDebounce':useDebounce,
+	'useFollowSystemTheme':useFollowSystemTheme,
 	'useLRUCache':useLRUCache,
 	'useMemoryCache':useMemoryCache,
 	'useMessage':useMessage,
@@ -135,12 +141,12 @@ watch(
   <div v-else class=" bg-card component-detail container-column scroll-container scroll-y">
     <div class="container-column padding-rem container-flex-1">
       <!-- 右侧标题 -->
-      <h2 class="text-primary text-center  margin-half-vetical border-horizontal-gray">
+      <h2 class="text-primary text-center padding-half-rem margin-half-vetical border-horizontal-gray">
         {{ component.displayName }} 组件
       </h2>
       <QTab :list="['文档说明', '组件展示']" @select="(index:number)=>currentTabIndex=index"/>
       <!-- 组件展示区 -->
-      <div v-show="currentTabIndex===0" class="component-display padding-rem radius-half-rem shadow-black scroll-container scroll-y scroll-x">
+      <div v-show="currentTabIndex===0" class="component-display padding-rem radius-half-rem shadow-black">
         <!-- Markdown 文档 -->
         <QMarkdownRender :content="currentCotent"/>
       </div>
@@ -180,11 +186,5 @@ watch(
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-@media screen and (max-width: 768px) {
-  .component-detail{
-    height: auto;
-  }
-
 }
 </style>
