@@ -14,6 +14,10 @@ const showArrow = ref(false);
 const resizeHandler = ()=>{
   showArrow.value=window.innerWidth<=768;
 }
+const updateSelected = (comp:ComponentInfo)=>{
+  console.log(comp);
+  selected.value=comp;
+}
 onMounted(() => {
   resizeHandler();
   window.addEventListener('resize', resizeHandler);
@@ -30,7 +34,7 @@ onUnmounted(() => {
     </div>
     <div class="app-layout container-center">
       <QCollapsibleSection :isShowArrow="showArrow" :direction="showArrow?'up':'down'">
-        <ComponentList  :selected="selected" @select="(comp)=>selected=comp"/>
+        <ComponentList  :selected="selected" @select="updateSelected"/>
       </QCollapsibleSection>
       <ComponentDetail :component="selected"/>
     </div>
