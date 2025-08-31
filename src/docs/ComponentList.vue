@@ -1,6 +1,6 @@
 <!-- src/docs/ComponentList.vue -->
 <script lang="ts" setup>
-import {computed} from 'vue'
+import { onBeforeMount} from 'vue'
 import {useComponentInfo}  from "@/utils/useComponentInfo.ts";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
 defineProps<{
@@ -11,7 +11,9 @@ const emit = defineEmits<{
   (e: 'select', comp: ComponentInfo): void
 }>()
 // ✅ 按 category 分组
-const grouped = computed(() => {
+let grouped:Map<string, ComponentInfo[]>|null = null;
+
+onBeforeMount(()=>{
   const map = new Map<string, ComponentInfo[]>()
   useComponentInfo.forEach((comp:ComponentInfo) => {
     if (!map.has(comp.category)) {
@@ -19,7 +21,7 @@ const grouped = computed(() => {
     }
     map.get(comp.category)!.push(comp)
   })
-  return map
+  grouped = map;
 })
 </script>
 
