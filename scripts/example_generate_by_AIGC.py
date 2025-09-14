@@ -83,7 +83,14 @@ def validate_file(file_path):
     else:
         write_file(file_path, '')
         print(f'已创建文件：{file_path}')
-
+def filter_dir(dir_path):
+    return any(field in dir_path for field in ['types', 'style', 'scripts', 'index', 'DemoBlock'])
+def validate_dir(dir_path):
+    if os.path.exists(dir_path):
+        pass
+    else:
+        os.mkdir(dir_path)
+        print(f'已创建目录：{dir_path}')
 
 target_display_path = r'F:\eclipse\worakjava\qyani-ui-docs\src\display'
 target_docs_path = r'F:\eclipse\worakjava\qyani-ui-docs\public\docs'
@@ -94,6 +101,12 @@ def main():
     example_md = read_file('scripts/example.md.txt')
     example_vue = read_file('scripts/example.vue.txt')
     for root, dirs, files in os.walk(src_vue_path):
+        for dir in dirs:
+            dir_path = os.path.join(root, dir).replace(src_vue_path,target_docs_path)
+            if filter_dir(dir_path):
+                continue
+            validate_dir(dir_path)
+            validate_dir(dir_path.replace(target_docs_path, target_display_path))
         for file in files:
             full_path = os.path.join(root, file)
             if filter_file(full_path):
@@ -119,7 +132,8 @@ def main():
                 write_file(docs_path, result)
                 print(f'为{docs_path}添加文档说明')
             if os.path.getsize(display_path) == 0:
-                message = f'阅读下面这个vue文件或者ts文件内容${src_content},并按照我给你的vue模板${example_vue}生成对应的vue文件,所有除了与vue相关的的导入其他的都是都是from "qyani-components"的命名导入'
+                message = f'阅读下面这个vue文件或者ts文件内容${src_content},并按照我给你的vue模板${example_vue}生成对应的vue文件,'\
+                            f'所有需要用到的组件前面都会加上Q首字母作为前缀,例如import {{QButton}} from "qyani-components"的命名导入'
                 result = rpc(model='qwen-plus',system_prompt=system_prompt, message=message)
                 write_file(display_path, result)
                 print(f'为{display_path}添加vue文件')

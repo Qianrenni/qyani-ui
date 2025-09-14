@@ -43,6 +43,10 @@ import Drawer from '../display/components/layout/Drawer.vue'
 import ScrollContainer from '../display/components/layout/ScrollContainer.vue'
 import Tree from '../display/components/layout/Tree.vue'
 import TreeNode from '../display/components/layout/TreeNode.vue'
+import Loading from '../display/components/loading/Loading.vue'
+import Breathing from '../display/components/loading/animations/Breathing.vue'
+import Skeleton from '../display/components/loading/animations/Skeleton.vue'
+import Spinner from '../display/components/loading/animations/Spinner.vue'
 import NavSection from '../display/components/navigation/NavSection.vue'
 import Tab from '../display/components/navigation/Tab.vue'
 import ConditionSelect from '../display/components/Sql/ConditionSelect.vue'
@@ -50,11 +54,15 @@ import ThemeToggle from '../display/components/theme/ThemeToggle.vue'
 import useDrag from '../display/events/useDrag.vue'
 import useFormEvents from '../display/events/useFormEvents.vue'
 import useMousePosition from '../display/events/useMousePosition.vue'
+import useAVLTree from '../display/utils/useAVLTree.vue'
 import useDebounce from '../display/utils/useDebounce.vue'
 import useFollowSystemTheme from '../display/utils/useFollowSystemTheme.vue'
+import useHeap from '../display/utils/useHeap.vue'
 import useLRUCache from '../display/utils/useLRUCache.vue'
 import useMemoryCache from '../display/utils/useMemoryCache.vue'
 import useMessage from '../display/utils/useMessage.vue'
+import useRedBlackTree from '../display/utils/useRedBlackTree.vue'
+import useSegmentTree from '../display/utils/useSegmentTree.vue'
 import useThrottle from '../display/utils/useThrottle.vue'
 import useTime from '../display/utils/useTime.vue'
 import useTimeDisplay from '../display/utils/useTimeDisplay.vue'
@@ -98,6 +106,10 @@ const componentMap ={
 	'ScrollContainer':ScrollContainer,
 	'Tree':Tree,
 	'TreeNode':TreeNode,
+	'Loading':Loading,
+	'Breathing':Breathing,
+	'Skeleton':Skeleton,
+	'Spinner':Spinner,
 	'NavSection':NavSection,
 	'Tab':Tab,
 	'ConditionSelect':ConditionSelect,
@@ -105,11 +117,15 @@ const componentMap ={
 	'useDrag':useDrag,
 	'useFormEvents':useFormEvents,
 	'useMousePosition':useMousePosition,
+	'useAVLTree':useAVLTree,
 	'useDebounce':useDebounce,
 	'useFollowSystemTheme':useFollowSystemTheme,
+	'useHeap':useHeap,
 	'useLRUCache':useLRUCache,
 	'useMemoryCache':useMemoryCache,
 	'useMessage':useMessage,
+	'useRedBlackTree':useRedBlackTree,
+	'useSegmentTree':useSegmentTree,
 	'useThrottle':useThrottle,
 	'useTime':useTime,
 	'useTimeDisplay':useTimeDisplay

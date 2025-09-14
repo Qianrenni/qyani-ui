@@ -241,6 +241,30 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/layout/TreeNode.md"
     },
     {
+        "name": "Loading",
+        "displayName": "Loading",
+        "category": "/components/loading/",
+        "docPath": "/docs/components/loading/Loading.md"
+    },
+    {
+        "name": "Breathing",
+        "displayName": "Breathing",
+        "category": "/components/loading/animations/",
+        "docPath": "/docs/components/loading/animations/Breathing.md"
+    },
+    {
+        "name": "Skeleton",
+        "displayName": "Skeleton",
+        "category": "/components/loading/animations/",
+        "docPath": "/docs/components/loading/animations/Skeleton.md"
+    },
+    {
+        "name": "Spinner",
+        "displayName": "Spinner",
+        "category": "/components/loading/animations/",
+        "docPath": "/docs/components/loading/animations/Spinner.md"
+    },
+    {
         "name": "NavSection",
         "displayName": "NavSection",
         "category": "/components/navigation/",
@@ -283,6 +307,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/events/useMousePosition.md"
     },
     {
+        "name": "useAVLTree",
+        "displayName": "useAVLTree",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useAVLTree.md"
+    },
+    {
         "name": "useDebounce",
         "displayName": "useDebounce",
         "category": "/utils/",
@@ -293,6 +323,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "useFollowSystemTheme",
         "category": "/utils/",
         "docPath": "/docs/utils/useFollowSystemTheme.md"
+    },
+    {
+        "name": "useHeap",
+        "displayName": "useHeap",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useHeap.md"
     },
     {
         "name": "useLRUCache",
@@ -311,6 +347,18 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "useMessage",
         "category": "/utils/",
         "docPath": "/docs/utils/useMessage.md"
+    },
+    {
+        "name": "useRedBlackTree",
+        "displayName": "useRedBlackTree",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useRedBlackTree.md"
+    },
+    {
+        "name": "useSegmentTree",
+        "displayName": "useSegmentTree",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useSegmentTree.md"
     },
     {
         "name": "useThrottle",
