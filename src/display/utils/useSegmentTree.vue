@@ -1,7 +1,7 @@
 ```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { QButton, QInput, QCarousel, QCarouselItem } from "qyani-components";
+import {QCarousel, QCarouselItem} from "qyani-components";
 
 const code = `
 \`\`\`html
