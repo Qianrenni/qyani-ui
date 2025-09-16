@@ -18,6 +18,7 @@ import MobileFrame from '../display/components/display/MobileFrame.vue'
 import ProgressBar from '../display/components/display/ProgressBar.vue'
 import RainFigure from '../display/components/display/RainFigure.vue'
 import ScrollNotice from '../display/components/display/ScrollNotice.vue'
+import VideoPlayer from '../display/components/display/VideoPlayer.vue'
 import VirtualList from '../display/components/display/VirtualList.vue'
 import FormButton from '../display/components/form/FormButton.vue'
 import FormCheckboxGroup from '../display/components/form/FormCheckboxGroup.vue'
@@ -40,6 +41,7 @@ import CollapseItem from '../display/components/layout/CollapseItem.vue'
 import CollapsibleSection from '../display/components/layout/CollapsibleSection.vue'
 import Dialog from '../display/components/layout/Dialog.vue'
 import Drawer from '../display/components/layout/Drawer.vue'
+import PopContainer from '../display/components/layout/PopContainer.vue'
 import ScrollContainer from '../display/components/layout/ScrollContainer.vue'
 import Tree from '../display/components/layout/Tree.vue'
 import TreeNode from '../display/components/layout/TreeNode.vue'
@@ -81,6 +83,7 @@ const componentMap ={
 	'ProgressBar':ProgressBar,
 	'RainFigure':RainFigure,
 	'ScrollNotice':ScrollNotice,
+	'VideoPlayer':VideoPlayer,
 	'VirtualList':VirtualList,
 	'FormButton':FormButton,
 	'FormCheckboxGroup':FormCheckboxGroup,
@@ -103,6 +106,7 @@ const componentMap ={
 	'CollapsibleSection':CollapsibleSection,
 	'Dialog':Dialog,
 	'Drawer':Drawer,
+	'PopContainer':PopContainer,
 	'ScrollContainer':ScrollContainer,
 	'Tree':Tree,
 	'TreeNode':TreeNode,

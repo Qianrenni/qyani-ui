@@ -91,6 +91,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/display/ScrollNotice.md"
     },
     {
+        "name": "VideoPlayer",
+        "displayName": "VideoPlayer",
+        "category": "/components/display/",
+        "docPath": "/docs/components/display/VideoPlayer.md"
+    },
+    {
         "name": "VirtualList",
         "displayName": "VirtualList",
         "category": "/components/display/",
@@ -221,6 +227,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "Drawer",
         "category": "/components/layout/",
         "docPath": "/docs/components/layout/Drawer.md"
+    },
+    {
+        "name": "PopContainer",
+        "displayName": "PopContainer",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/PopContainer.md"
     },
     {
         "name": "ScrollContainer",
