@@ -1,8 +1,5 @@
-```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { QSkipList } from "qyani-components";
-
 // 示例使用 QSkipList 的代码
 const code = `
 \`\`\`ts
@@ -68,4 +65,3 @@ console.log(skipList.length); // 2
   justify-content: center;
 }
 </style>
-```

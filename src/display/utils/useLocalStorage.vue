@@ -1,7 +1,6 @@
-```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { UseLocalStorage } from "qyani-components";
+import { UseLocalStorage,type TypeGuard } from "qyani-components";
 
 // 定义类型守卫函数（示例：检查是否为字符串）
 const isString: TypeGuard<string> = (value: any): value is string => typeof value === 'string';
@@ -67,4 +66,3 @@ const keys = storage.getKeys();
   gap: 16px;
 }
 </style>
-```
