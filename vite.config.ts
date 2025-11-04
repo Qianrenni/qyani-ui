@@ -10,7 +10,7 @@ export default defineConfig(({mode})=>{
         resolve: {
             alias: {
                 '@': resolve(__dirname, 'src'),
-                ...(QYANI_COMPONENTS_PATH && { 'qyani-components': QYANI_COMPONENTS_PATH})
+                // ...(QYANI_COMPONENTS_PATH && { 'qyani-components': QYANI_COMPONENTS_PATH})
             }
         }
     }
