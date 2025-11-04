@@ -241,6 +241,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/components/layout/ScrollContainer.md"
     },
     {
+        "name": "SwiperAction",
+        "displayName": "SwiperAction",
+        "category": "/components/layout/",
+        "docPath": "/docs/components/layout/SwiperAction.md"
+    },
+    {
         "name": "Tree",
         "displayName": "Tree",
         "category": "/components/layout/",
@@ -343,6 +349,12 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/utils/useHeap.md"
     },
     {
+        "name": "useLocalStorage",
+        "displayName": "useLocalStorage",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useLocalStorage.md"
+    },
+    {
         "name": "useLRUCache",
         "displayName": "useLRUCache",
         "category": "/utils/",
@@ -367,10 +379,28 @@ export const useComponentInfo:ComponentInfo[] = [
         "docPath": "/docs/utils/useRedBlackTree.md"
     },
     {
+        "name": "useScreenSize",
+        "displayName": "useScreenSize",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useScreenSize.md"
+    },
+    {
         "name": "useSegmentTree",
         "displayName": "useSegmentTree",
         "category": "/utils/",
         "docPath": "/docs/utils/useSegmentTree.md"
+    },
+    {
+        "name": "useShowLoading",
+        "displayName": "useShowLoading",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useShowLoading.md"
+    },
+    {
+        "name": "useSkipList",
+        "displayName": "useSkipList",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useSkipList.md"
     },
     {
         "name": "useThrottle",
@@ -389,5 +419,11 @@ export const useComponentInfo:ComponentInfo[] = [
         "displayName": "useTimeDisplay",
         "category": "/utils/",
         "docPath": "/docs/utils/useTimeDisplay.md"
+    },
+    {
+        "name": "useWindowResize",
+        "displayName": "useWindowResize",
+        "category": "/utils/",
+        "docPath": "/docs/utils/useWindowResize.md"
     }
 ]

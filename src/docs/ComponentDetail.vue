@@ -43,6 +43,7 @@ import Dialog from '../display/components/layout/Dialog.vue'
 import Drawer from '../display/components/layout/Drawer.vue'
 import PopContainer from '../display/components/layout/PopContainer.vue'
 import ScrollContainer from '../display/components/layout/ScrollContainer.vue'
+import SwiperAction from '../display/components/layout/SwiperAction.vue'
 import Tree from '../display/components/layout/Tree.vue'
 import TreeNode from '../display/components/layout/TreeNode.vue'
 import Loading from '../display/components/loading/Loading.vue'
@@ -60,14 +61,19 @@ import useAVLTree from '../display/utils/useAVLTree.vue'
 import useDebounce from '../display/utils/useDebounce.vue'
 import useFollowSystemTheme from '../display/utils/useFollowSystemTheme.vue'
 import useHeap from '../display/utils/useHeap.vue'
+import useLocalStorage from '../display/utils/useLocalStorage.vue'
 import useLRUCache from '../display/utils/useLRUCache.vue'
 import useMemoryCache from '../display/utils/useMemoryCache.vue'
 import useMessage from '../display/utils/useMessage.vue'
 import useRedBlackTree from '../display/utils/useRedBlackTree.vue'
+import useScreenSize from '../display/utils/useScreenSize.vue'
 import useSegmentTree from '../display/utils/useSegmentTree.vue'
+import useShowLoading from '../display/utils/useShowLoading.vue'
+import useSkipList from '../display/utils/useSkipList.vue'
 import useThrottle from '../display/utils/useThrottle.vue'
 import useTime from '../display/utils/useTime.vue'
 import useTimeDisplay from '../display/utils/useTimeDisplay.vue'
+import useWindowResize from '../display/utils/useWindowResize.vue'
 const componentMap ={
 	'Icon':Icon,
 	'Message':Message,
@@ -108,6 +114,7 @@ const componentMap ={
 	'Drawer':Drawer,
 	'PopContainer':PopContainer,
 	'ScrollContainer':ScrollContainer,
+	'SwiperAction':SwiperAction,
 	'Tree':Tree,
 	'TreeNode':TreeNode,
 	'Loading':Loading,
@@ -125,14 +132,19 @@ const componentMap ={
 	'useDebounce':useDebounce,
 	'useFollowSystemTheme':useFollowSystemTheme,
 	'useHeap':useHeap,
+	'useLocalStorage':useLocalStorage,
 	'useLRUCache':useLRUCache,
 	'useMemoryCache':useMemoryCache,
 	'useMessage':useMessage,
 	'useRedBlackTree':useRedBlackTree,
+	'useScreenSize':useScreenSize,
 	'useSegmentTree':useSegmentTree,
+	'useShowLoading':useShowLoading,
+	'useSkipList':useSkipList,
 	'useThrottle':useThrottle,
 	'useTime':useTime,
-	'useTimeDisplay':useTimeDisplay
+	'useTimeDisplay':useTimeDisplay,
+	'useWindowResize':useWindowResize
 }
 
 defineOptions({

@@ -1,40 +1,121 @@
-# `UseMemoryCache` 缓存类文档
+# 类型定义
 
-## Props 参数
+## `CacheItem<T>`
 
-此类为纯逻辑类，无 UI 组件相关属性。
+缓存项类，用于存储缓存值和过期时间。
+
+### 构造函数
+
+```ts
+constructor(value: T, ttl: number)
+```
+
+- **参数**
+  - `value: T` — 缓存的值
+  - `ttl: number` — 存活时间（毫秒）
+
+### 属性
+
+| 属性 | 类型 | 说明 |
+|------|------|------|
+| `value` | `T` | 缓存的值 |
+| `expireAt` | `number` | 过期时间戳（毫秒） |
+
+### 方法
+
+#### `isExpired(): boolean`
+
+检查缓存项是否已过期。
+
+- **返回值**  
+  `boolean` — 如果当前时间超过过期时间，返回 `true`；否则返回 `false`
+
+#### `refresh(ttl: number): void`
+
+刷新缓存项的过期时间。
+
+- **参数**
+  - `ttl: number` — 新的存活时间（毫秒）
 
 ---
 
-## Events 事件
+## `UseMemoryCache`
 
-此类不涉及事件触发机制，因此无对外事件。
+内存缓存类，提供缓存的设置、获取、删除及自动清理功能。
+
+### 构造函数
+
+```ts
+constructor(ttlMs: number = 5 * 60 * 1000)
+```
+
+- **参数**
+  - `ttlMs: number` — 缓存项的默认存活时间（毫秒），默认为 5 分钟
+
+### 方法
+
+#### `set<T>(key: string, value: T): void`
+
+设置缓存值，带过期时间。
+
+- **参数**
+  - `key: string` — 缓存键
+  - `value: T` — 缓存值
+- **泛型**
+  - `T` — 缓存值的类型
+
+#### `get<T>(key: string): T | null`
+
+获取缓存值，若不存在或已过期则返回 `null`，并自动删除过期项。命中时重置过期时间（滑动窗口语义）。
+
+- **参数**
+  - `key: string` — 缓存键
+- **返回值**
+  - `T | null` — 缓存值或 `null`
+- **泛型**
+  - `T` — 缓存值的类型
+
+#### `has(key: string): boolean`
+
+检查指定键的缓存是否存在且未过期。
+
+- **参数**
+  - `key: string` — 缓存键
+- **返回值**
+  - `boolean` — 存在且未过期返回 `true`，否则 `false`
+
+#### `delete(key: string): void`
+
+删除指定键的缓存项。
+
+- **参数**
+  - `key: string` — 缓存键
+
+#### `clear(): void`
+
+清空所有缓存项。
+
+#### `size(): number`
+
+获取当前缓存中有效项的数量。
+
+- **返回值**
+  - `number` — 缓存项数量
+
+#### `cleanup(): void`
+
+清理所有已过期的缓存项（内部定时调用，每分钟一次）。
 
 ---
 
-## Slots 插槽
+## 导出成员
 
-此类为内存缓存实现，不涉及插槽内容。
+### `shareMemoryCache: UseMemoryCache`
 
----
+全局共享的内存缓存实例，默认 TTL 为 5 分钟。
 
-## Expose 方法
+```ts
+export const shareMemoryCache = new UseMemoryCache();
+```
 
-| 方法名     | 参数 | 返回值 | 说明                        |
-|----------|----|-----|---------------------------|
-| `set`    | `(key: string, value: T): void` | `void` | 设置缓存项，使用默认过期时间 |
-| `get`    | `(key: string): T \| null`      | `T \| null` | 获取缓存项，若不存在或过期则返回 null |
-| `has`    | `(key: string): boolean`        | `boolean` | 判断缓存中是否存在未过期的项 |
-| `delete` | `(key: string): void`           | `void` | 删除指定缓存项              |
-| `clear`  | `()`                            | `void` | 清空所有缓存                |
-| `size`   | `()`                            | `number` | 获取当前缓存项数量            |
-
----
-
-## 其他说明
-
-- 默认缓存过期时间为 **5分钟（300000毫秒）**
-- 缓存采用 **滑动窗口策略**：每次读取时刷新过期时间
-- 后台定时清理任务每 **60秒** 执行一次，清理过期缓存项
-
-> 💡 提示：该缓存类适合用于内存中临时存储对象，例如缓存接口数据、用户状态等，不适合用于持久化存储。若需持久化，请结合 `localStorage` 或其他持久化方案。
+> 💡 可直接导入使用，适用于应用内通用缓存场景。
