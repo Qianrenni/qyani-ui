@@ -1,10 +1,10 @@
 <!-- App.vue -->
 <!-- src/docs/App.vue -->
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref, watch} from 'vue'
+import {ref, watch} from 'vue'
 import ComponentList from "@/docs/ComponentList.vue";
 import ComponentDetail from "@/docs/ComponentDetail.vue";
-import {QThemeToggle, useScreenSize, useWindowResize} from "qyani-components";
+import {QThemeToggle, useScreenSize} from "qyani-components";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
 import {useFollowSystemTheme} from "qyani-components";
 useFollowSystemTheme();
