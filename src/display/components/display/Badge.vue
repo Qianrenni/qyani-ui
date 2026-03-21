@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import {defineOptions} from "vue";
 import DemoBlock from "@/DemoBlock.vue";
-import {QBadge} from "qyani-components";
+import {QBadge} from "qiannai-components";
 
 defineOptions({
   name: "Badge"

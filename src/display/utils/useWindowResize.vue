@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { useWindowResize } from "qyani-components";
+import { useWindowResize } from "qiannai-components";
 import { ref } from "vue";
 const isLessThan768 = ref(window.innerWidth < 768);
 useWindowResize.addHandler((width) =>{
@@ -10,7 +10,7 @@ useWindowResize.addHandler((width) =>{
 })
 const code = `
 \`\`\`javascript
-import { useWindowResize } from "qyani-components";
+import { useWindowResize } from "qiannai-components";
 useWindowResize.addHandler((width) =>{
   if(width < 768){
     alert("less than 768");

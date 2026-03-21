@@ -1,7 +1,7 @@
 ```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import {useShowLoading} from 'qyani-components'
+import {useShowLoading} from 'qiannai-components'
 const code = `
 \`\`\`javascript
 <div class="container-align-center container-column margin-vetical gap">

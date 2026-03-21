@@ -21,7 +21,7 @@ prefix="""
 <!-- src/docs/ComponentDetail.vue -->
 <script lang="ts" setup>
 import {defineOptions, ref, watch} from 'vue'
-import {QMarkdownRender, QTab} from "qyani-components";
+import {QMarkdownRender, QTab} from "qiannai-components";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
 """
 prefix+='\n'.join(result)

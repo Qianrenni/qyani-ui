@@ -67,7 +67,7 @@
 <script lang="ts" setup>
 import {ref} from "vue";
 import DemoBlock from "@/DemoBlock.vue";
-import {QDrawer,QFormSwitch} from 'qyani-components'
+import {QDrawer,QFormSwitch} from 'qiannai-components'
 const showDrawer = ref({
   left: false,
   right: false,
@@ -143,7 +143,7 @@ const code =`
 `+`
 \`\`\`ts
 import {ref} from "vue";
-import {QDrawer,QFormSwitch} from 'qyani-components'
+import {QDrawer,QFormSwitch} from 'qiannai-components'
 const showDrawer = ref({
   left: false,
   right: false,

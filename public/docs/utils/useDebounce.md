@@ -33,7 +33,7 @@ export const useDebounce = <T extends (...args: any[]) => any>(
 ### 基础用法
 
 ```typescript
-import { useDebounce } from 'qyani-components'
+import { useDebounce } from 'qiannai-components'
 
 const count = ref(0)
 // 创建一个防抖函数，延迟500ms执行
@@ -52,7 +52,7 @@ debounceAdd()
 
 ```typescript
 import { ref } from 'vue'
-import { useDebounce } from 'qyani-components'
+import { useDebounce } from 'qiannai-components'
 
 const searchKeyword = ref('')
 const searchResults = ref([])
@@ -77,7 +77,7 @@ const handleInput = (e: Event) => {
 
 ```typescript
 import { ref } from 'vue'
-import { useDebounce } from 'qyani-components'
+import { useDebounce } from 'qiannai-components'
 
 const windowWidth = ref(window.innerWidth)
 

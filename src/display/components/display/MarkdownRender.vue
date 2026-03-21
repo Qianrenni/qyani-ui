@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {QMarkdownRender} from "qyani-components";
+import {QMarkdownRender} from "qiannai-components";
 import DemoBlock from '@/DemoBlock.vue'
 
 const content = `

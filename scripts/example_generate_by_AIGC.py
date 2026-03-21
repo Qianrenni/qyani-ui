@@ -94,7 +94,7 @@ def validate_dir(dir_path):
 
 target_display_path = r'F:\eclipse\worakjava\qyani-ui-docs\src\display'
 target_docs_path = r'F:\eclipse\worakjava\qyani-ui-docs\public\docs'
-src_vue_path = r'F:\eclipse\worakjava\qyani-components\src'
+src_vue_path = r'F:\eclipse\worakjava\qiannai-components\src'
 
 def main():
     system_prompt = get_system_prompt(type='strict')
@@ -133,7 +133,7 @@ def main():
                 print(f'为{docs_path}添加文档说明')
             if os.path.getsize(display_path) == 0:
                 message = f'阅读下面这个vue文件或者ts文件内容${src_content},并按照我给你的vue模板${example_vue}生成对应的vue文件,'\
-                            f'所有需要用到的组件前面都会加上Q首字母作为前缀,例如import {{QButton}} from "qyani-components"的命名导入'
+                            f'所有需要用到的组件前面都会加上Q首字母作为前缀,例如import {{QButton}} from "qiannai-components"的命名导入'
                 result = rpc(model='qwen-plus',system_prompt=system_prompt, message=message)
                 write_file(display_path, result)
                 print(f'为{display_path}添加vue文件')

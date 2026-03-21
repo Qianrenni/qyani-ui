@@ -49,7 +49,7 @@
   </DemoBlock>
 </template>
 <script lang="ts" setup>
-import {QPagination} from "qyani-components";
+import {QPagination} from "qiannai-components";
 import DemoBlock from "@/DemoBlock.vue";
 import {ref} from "vue";
 

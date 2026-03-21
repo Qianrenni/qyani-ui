@@ -1,11 +1,11 @@
 ```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { useScreenSize } from "qyani-components";
+import { useScreenSize } from "qiannai-components";
 const isLessThan = useScreenSize.getWidth(768);
 const code = `
 \`\`\`javascript
-import { useScreenSize } from "qyani-components";
+import { useScreenSize } from "qiannai-components";
 const isLessThan = useScreenSize.getWidth(768);
 \`\`\`
 `;

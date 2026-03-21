@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import {computed} from 'vue'
-import {QMarkdownRender} from "qyani-components";
+import {QMarkdownRender} from "qiannai-components";
 const props = defineProps<{
   title?: string
   code?: string

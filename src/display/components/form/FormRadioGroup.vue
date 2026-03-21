@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormRadioGroup} from "qyani-components";
+import {QFormRadioGroup} from "qiannai-components";
 import {reactive} from "vue";
 
 const form = reactive({

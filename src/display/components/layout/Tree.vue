@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts" setup>
-import {QTree} from "qyani-components";
-import  { type TreeNodeData} from 'qyani-components'
+import {QTree} from "qiannai-components";
+import  { type TreeNodeData} from 'qiannai-components'
 import DemoBlock from "@/DemoBlock.vue";
 
 const treeData: TreeNodeData[] = [
@@ -84,8 +84,8 @@ const code =`
 \`\`\`
 `+`
 \`\`\`ts
-import {QTree} from "qyani-components";
-import  { type TreeNodeData} from 'qyani-components'
+import {QTree} from "qiannai-components";
+import  { type TreeNodeData} from 'qiannai-components'
 import DemoBlock from "@/DemoBlock.vue";
 
 const treeData: TreeNodeData[] = [

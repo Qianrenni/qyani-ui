@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {useMousePosition} from "qyani-components";
+import {useMousePosition} from "qiannai-components";
 
 const {x, y} = useMousePosition()
 const code = `

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormColorPicker} from "qyani-components";
+import {QFormColorPicker} from "qiannai-components";
 import {reactive} from "vue";
 
 const form = reactive({

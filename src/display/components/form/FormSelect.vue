@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormSelect} from "qyani-components";
+import {QFormSelect} from "qiannai-components";
 import {reactive} from "vue";
 
 const code = `

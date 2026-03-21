@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {QMobileFrame} from "qyani-components";
+import {QMobileFrame} from "qiannai-components";
 import DemoBlock from '@/DemoBlock.vue'
 
 const code = `

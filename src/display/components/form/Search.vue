@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QSearch} from "qyani-components";
+import {QSearch} from "qiannai-components";
 
 const searchHandler = (e: string) => {
   alert(e);

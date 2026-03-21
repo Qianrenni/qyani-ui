@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {QIcon} from "qyani-components";
+import {QIcon} from "qiannai-components";
 import DemoBlock from "@/DemoBlock.vue";
 
 defineOptions({

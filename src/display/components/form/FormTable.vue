@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormTable} from "qyani-components";
+import {QFormTable} from "qiannai-components";
 
 const code = `
 \`\`\`html

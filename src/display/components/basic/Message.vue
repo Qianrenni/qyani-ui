@@ -1,7 +1,7 @@
 <!-- MessageDemo.vue -->
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { QMessage } from "qyani-components";
+import { QMessage } from "qiannai-components";
 
 const code = `
 \`\`\`html

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {QScrollContainer} from "qyani-components";
+import {QScrollContainer} from "qiannai-components";
 import DemoBlock from "@/DemoBlock.vue";
 
 const code = `

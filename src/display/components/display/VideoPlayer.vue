@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import {QVideoPlayer} from "qyani-components";
+import {QVideoPlayer} from "qiannai-components";
 
 const code = `
 \`\`\`html

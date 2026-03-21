@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { QFormSwitch } from "qyani-components";
+import { QFormSwitch } from "qiannai-components";
 import {ref} from "vue";
 
 const code = `

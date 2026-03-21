@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {QThemeToggle} from "qyani-components";
+import {QThemeToggle} from "qiannai-components";
 import DemoBlock from "@/DemoBlock.vue";
 
 const code = `

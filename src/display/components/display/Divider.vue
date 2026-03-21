@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {QDivider} from "qyani-components";
+import {QDivider} from "qiannai-components";
 import DemoBlock from '@/DemoBlock.vue'
 
 const code = `

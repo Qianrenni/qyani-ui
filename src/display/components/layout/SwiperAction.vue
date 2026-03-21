@@ -1,7 +1,7 @@
 ```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { QSwiperAction } from "qyani-components";
+import { QSwiperAction } from "qiannai-components";
 import { ref } from "vue";
 const code = `
 \`\`\`html

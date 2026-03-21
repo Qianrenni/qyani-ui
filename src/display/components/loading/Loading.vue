@@ -1,7 +1,7 @@
 ```vue
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { QLoading } from "qyani-components";
+import { QLoading } from "qiannai-components";
 
 const code = `
 \`\`\`html

@@ -22,8 +22,8 @@
 </template>
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormButton} from "qyani-components";
-import {QDialog} from 'qyani-components'
+import {QFormButton} from "qiannai-components";
+import {QDialog} from 'qiannai-components'
 import {ref} from "vue";
 const visible = ref(false);
 </script>

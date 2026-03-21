@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import {QPopContainer} from "qyani-components";
+import {QPopContainer} from "qiannai-components";
 
 const code = `
 \`\`\`html

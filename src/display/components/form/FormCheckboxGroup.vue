@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormCheckboxGroup} from "qyani-components";
+import {QFormCheckboxGroup} from "qiannai-components";
 import {reactive} from "vue";
 
 const form = reactive({

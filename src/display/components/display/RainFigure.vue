@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QRainFigure} from "qyani-components";
+import {QRainFigure} from "qiannai-components";
 
 const code = `
 \`\`\`html

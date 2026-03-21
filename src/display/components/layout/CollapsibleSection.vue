@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QCollapsibleSection} from "qyani-components";
+import {QCollapsibleSection} from "qiannai-components";
 
 const code = `
 \`\`\`html

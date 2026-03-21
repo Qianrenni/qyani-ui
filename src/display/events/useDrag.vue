@@ -2,7 +2,7 @@
 
 import DemoBlock from "@/DemoBlock.vue";
 
-import {useDrag} from "qyani-components";
+import {useDrag} from "qiannai-components";
 import {onMounted, useTemplateRef} from "vue";
 
 const refSpan = useTemplateRef('target');

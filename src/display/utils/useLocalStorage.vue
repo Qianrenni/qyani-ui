@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { UseLocalStorage,type TypeGuard } from "qyani-components";
+import { UseLocalStorage,type TypeGuard } from "qiannai-components";
 
 // 定义类型守卫函数（示例：检查是否为字符串）
 const isString: TypeGuard<string> = (value: any): value is string => typeof value === 'string';

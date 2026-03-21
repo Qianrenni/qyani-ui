@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QProgressBar} from "qyani-components";
+import {QProgressBar} from "qiannai-components";
 
 const code = `
 \`\`\`html

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QTab} from "qyani-components";
+import {QTab} from "qiannai-components";
 
 const code = `
 \`\`\`html

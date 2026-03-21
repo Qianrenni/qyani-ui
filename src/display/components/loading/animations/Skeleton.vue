@@ -4,7 +4,7 @@
   </DemoBlock>
 </template>
 <script setup lang="ts">
-import {QSkeleton} from 'qyani-components'
+import {QSkeleton} from 'qiannai-components'
 import DemoBlock from "@/DemoBlock.vue";
 
 const code = `

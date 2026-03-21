@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormText} from "qyani-components";
+import {QFormText} from "qiannai-components";
 import {reactive} from "vue";
 
 const code = `

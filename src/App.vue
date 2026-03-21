@@ -4,9 +4,9 @@
 import {ref, watch} from 'vue'
 import ComponentList from "@/docs/ComponentList.vue";
 import ComponentDetail from "@/docs/ComponentDetail.vue";
-import {QThemeToggle, useScreenSize} from "qyani-components";
+import {QThemeToggle, useScreenSize} from "qiannai-components";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
-import {useFollowSystemTheme} from "qyani-components";
+import {useFollowSystemTheme} from "qiannai-components";
 useFollowSystemTheme();
 const selected = ref<ComponentInfo | null>(null)
 const updateSelected = (comp:ComponentInfo)=>{

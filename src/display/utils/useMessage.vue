@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import {useMessage} from "qyani-components";
-import {QFormButton} from "qyani-components";
+import {useMessage} from "qiannai-components";
+import {QFormButton} from "qiannai-components";
 
 const code = `
 \`\`\`html
@@ -20,8 +20,8 @@ const code = `
 \`\`\`
 `+`
 \`\`\`ts
-import {useMessage} from "qyani-components";
-import {QFormButton} from "qyani-components";
+import {useMessage} from "qiannai-components";
+import {QFormButton} from "qiannai-components";
 \`\`\``
 ;
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QFormRangeSlider} from "qyani-components";
+import {QFormRangeSlider} from "qiannai-components";
 import {reactive} from "vue";
 
 const code = `

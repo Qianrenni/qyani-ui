@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import  {QNavSection} from "qyani-components";
+import  {QNavSection} from "qiannai-components";
 
 const content = {
   title: '标题1',

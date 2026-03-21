@@ -19,8 +19,8 @@
   </DemoBlock>
 </template>
 <script lang="ts" setup>
-import {QLazyImage} from "qyani-components";
-import {QScrollContainer} from "qyani-components";
+import {QLazyImage} from "qiannai-components";
+import {QScrollContainer} from "qiannai-components";
 import DemoBlock from "@/DemoBlock.vue";
 import {ref} from "vue";
 

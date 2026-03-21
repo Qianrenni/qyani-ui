@@ -2,7 +2,7 @@
 
 import DemoBlock from "@/DemoBlock.vue";
 import {ref} from "vue";
-import {useDebounce} from "qyani-components";
+import {useDebounce} from "qiannai-components";
 
 const count = ref(0);
 const debounceAdd = useDebounce(() => {

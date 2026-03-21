@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QScrollNotice} from "qyani-components";
+import {QScrollNotice} from "qiannai-components";
 
 const code = `
 \`\`\`html

@@ -11,9 +11,9 @@ importers:
       '@types/node':
         specifier: ^24.3.0
         version: 24.3.0
-      qyani-components:
-        specifier: ^1.5.2
-        version: 1.5.2(vue@3.5.18(typescript@5.8.3))
+      qiannai-components:
+        specifier: ^1.0.1
+        version: 1.0.1
       vue:
         specifier: ^3.5.18
         version: 3.5.18(typescript@5.8.3)
@@ -1599,10 +1599,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  qyani-components@1.5.2:
-    resolution: {integrity: sha512-SVvbsOVwJlFPkgiZteeBji+rdiDIyAPxQDpZP79/OxiH1obMqcVFOUWBNfw5XPAeEKjRoPJ3JHSZ+dfjIhTLPQ==}
-    peerDependencies:
-      vue: ^3.5.18
+  qiannai-components@1.0.1:
+    resolution: {integrity: sha512-K/nw7m9fNoGf3qJ3DZH+rAdvq7vYOIjxGbkno0W5EObO77WmF+Ej8FbKKFTMRoj86fDY3UX+s2uUEMHl6cHerQ==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3342,9 +3340,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  qyani-components@1.5.2(vue@3.5.18(typescript@5.8.3)):
-    dependencies:
-      vue: 3.5.18(typescript@5.8.3)
+  qiannai-components@1.0.1: {}
 
   resolve-from@4.0.0: {}
 

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DemoBlock from "@/DemoBlock.vue";
-import { useTimeDisplay } from "qyani-components";
+import { useTimeDisplay } from "qiannai-components";
 
 // 示例时间源和格式
 const now = new Date();
@@ -23,7 +23,7 @@ const code = `
 \`\`\`
 `+`
 \`\`\`ts
-import { useTimeDisplay } from "qyani-components";
+import { useTimeDisplay } from "qiannai-componentss";
 
 // 示例时间源和格式
 const now = new Date();

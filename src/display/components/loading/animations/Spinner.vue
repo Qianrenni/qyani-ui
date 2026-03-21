@@ -5,7 +5,7 @@ defineOptions({
 })
 
 import DemoBlock from "@/DemoBlock.vue";
-import {QSpinner} from "qyani-components";
+import {QSpinner} from "qiannai-components";
 
 const code = `
 \`\`\`html
