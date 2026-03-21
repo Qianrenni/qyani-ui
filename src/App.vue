@@ -1,62 +1,70 @@
 <!-- App.vue -->
 <!-- src/docs/App.vue -->
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref} from 'vue'
+import { onMounted, onUnmounted, ref, watch} from 'vue'
 import ComponentList from "@/docs/ComponentList.vue";
 import ComponentDetail from "@/docs/ComponentDetail.vue";
-import {QThemeToggle} from "qyani-components";
+import {QThemeToggle, useScreenSize, useWindowResize} from "qyani-components";
 import type {ComponentInfo} from "@/utils/useComponentInfo.ts";
-import {QCollapsibleSection} from "qyani-components";
 import {useFollowSystemTheme} from "qyani-components";
 useFollowSystemTheme();
 const selected = ref<ComponentInfo | null>(null)
-const showArrow = ref(false);
-const resizeHandler = ()=>{
-  showArrow.value=window.innerWidth<=768;
-}
 const updateSelected = (comp:ComponentInfo)=>{
-  console.log(comp);
   selected.value=comp;
 }
-onMounted(() => {
-  resizeHandler();
-  window.addEventListener('resize', resizeHandler);
-});
-onUnmounted(() => {
-  window.removeEventListener('resize', resizeHandler);
-})
+const showMenu = useScreenSize.getWidth(768);
+const showDrawer = ref(false);
+watch(
+  ()=>showMenu.value,
+  (newValue)=>{
+    if(!newValue){
+      showDrawer.value = false;
+    }
+  }
+)
 </script>
 
 <template>
-  <div class="app-layout container-column">
-    <div class="container container-flex-start padding-horizontal bg-image-header text-white ">
-      <q-theme-toggle :size="32"/>
-    </div>
-    <div class="app-layout container-center">
-      <QCollapsibleSection :isShowArrow="showArrow" :direction="showArrow?'up':'down'">
-        <ComponentList  :selected="selected" @select="updateSelected"/>
-      </QCollapsibleSection>
-      <ComponentDetail :component="selected"/>
-    </div>
+  <div class="app-layout ">
+    <header 
+      class="bg-card container"
+      style="justify-content: space-between;"
+    >
+      <QThemeToggle
+        :size="24"
+        :title="'主题变换'"
+      />
+      <QIcon
+        v-show="showMenu"
+        icon="Menu"
+        :size="24"
+        @click="showDrawer = !showDrawer"
+      />
+    </header>
+    <main class=" container">
+      <ComponentList
+        :selected="selected"
+        class=" hidden-768"
+        @select="updateSelected"
+      />
+      <ComponentDetail :component="selected" />
+    </main>
+    <QDrawer
+      v-model:visible="showDrawer"
+      direction="left"
+    >
+      <ComponentList
+        :selected="selected"
+        style="height: 100vh;"
+        @select="updateSelected"
+      />
+    </QDrawer>
   </div>
 </template>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .app-layout {
   width: 100vw;
   height: 100vh;
-}
-@media screen and (max-width: 768px) {
-  .app-layout {
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column-reverse;
-  }
 }
 </style>

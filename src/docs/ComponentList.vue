@@ -26,20 +26,27 @@ onBeforeMount(()=>{
 </script>
 
 <template>
-  <div class="component-list container-column padding-rem scroll-container scroll-y">
+  <div class="component-list scroll-container scroll-y">
     <!-- 左侧标题 -->
-    <h2 class="text-primary text-center padding-half-rem margin-half-vetical border-horizontal-gray">组件列表</h2>
+    <h2 class="text-primary text-center padding-half-rem margin-half-vetical border-horizontal-gray">
+      组件列表
+    </h2>
 
-    <div v-for="[category, list] in grouped" :key="category" class="category margin-half-vetical">
-      <div class="text-12rem text-muted padding-half-rem radius-third-rem "><strong><em>{{ category }}</em></strong>
+    <div
+      v-for="[category, list] in grouped"
+      :key="category"
+      class="category margin-half-vetical"
+    >
+      <div class="text-12rem text-muted padding-half-rem radius-third-rem ">
+        <strong><em>{{ category }}</em></strong>
       </div>
       <div class="container-column padding-half-rem">
         <span
-            v-for="comp in list"
-            :key="comp.name"
-            :class="{'component-active': selected?.name === comp.name}"
-            class="component-item padding-24rem margin-fourth-vetical radius-third-rem"
-            @click="emit('select', comp)"
+          v-for="comp in list"
+          :key="comp.name"
+          :class="{'component-active': selected?.name === comp.name}"
+          class="component-item padding-24rem margin-fourth-vetical radius-third-rem"
+          @click="emit('select', comp)"
         >
           {{ comp.displayName }}
         </span>
@@ -52,7 +59,7 @@ onBeforeMount(()=>{
 .component-list {
   width: 260px;
   border-right: 1px solid var(--primary-color);
-  height: calc(100vh - 32px);
+  height: calc( 100vh - 3.5rem );
 }
 
 /* 组件项样式 */
@@ -84,14 +91,5 @@ onBeforeMount(()=>{
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-@media screen and (max-width: 768px) {
-  .component-list{
-    position:sticky;
-    bottom: 0;
-    width: 100%;
-    max-height: 30vh;
-
-  }
 }
 </style>

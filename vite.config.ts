@@ -1,16 +1,17 @@
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import {resolve} from 'path'
+import {loadEnv} from 'vite'
 // https://vite.dev/config/
-export default defineConfig(()=>{
-    // const  env = loadEnv(mode,process.cwd(),'');
-    // const {QYANI_COMPONENTS_PATH} = env;
+export default defineConfig(({mode})=>{
+    const  env = loadEnv(mode,process.cwd(),'');
+    const {QYANI_COMPONENTS_PATH} = env;
     return {
         plugins: [vue()],
         resolve: {
             alias: {
                 '@': resolve(__dirname, 'src'),
-                // ...(QYANI_COMPONENTS_PATH && { 'qyani-components': QYANI_COMPONENTS_PATH})
+                ...(QYANI_COMPONENTS_PATH && { 'qyani-components': QYANI_COMPONENTS_PATH})
             }
         }
     }

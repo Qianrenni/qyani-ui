@@ -27,17 +27,16 @@ const code = `
 <template>
   <DemoBlock :code="code">
     <fieldset>
-      <legend
-      >
+      <legend>
         按钮控件
       </legend>
       <QFormButton
-          type="submit"
+        type="submit"
       >
         提交
       </QFormButton>
       <QFormButton
-          type="reset"
+        type="reset"
       >
         重置
       </QFormButton>

@@ -1,4 +1,4 @@
-// test/main.ts
+// main.ts
 import {createApp} from 'vue'
 import App from './App.vue'
 import 'qyani-components/dist/style.css'

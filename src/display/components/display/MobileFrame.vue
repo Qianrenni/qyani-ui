@@ -7,11 +7,11 @@ const code = `
 <QMobileFrame :src="url"/>
 \`\`\`
 `
-const url = "http://1.95.141.194/user/"
+const url = "http://1.95.141.194/#"
 </script>
 <template>
   <DemoBlock :code="code">
-    <QMobileFrame :src="url"/>
+    <QMobileFrame :src="url" />
   </DemoBlock>
 </template>
 
