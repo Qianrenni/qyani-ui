@@ -12,8 +12,8 @@ importers:
         specifier: ^24.3.0
         version: 24.3.0
       qiannai-components:
-        specifier: ^1.0.1
-        version: 1.0.1
+        specifier: ^1.0.2
+        version: 1.0.2
       vue:
         specifier: ^3.5.18
         version: 3.5.18(typescript@5.8.3)
@@ -1599,8 +1599,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  qiannai-components@1.0.1:
-    resolution: {integrity: sha512-K/nw7m9fNoGf3qJ3DZH+rAdvq7vYOIjxGbkno0W5EObO77WmF+Ej8FbKKFTMRoj86fDY3UX+s2uUEMHl6cHerQ==}
+  qiannai-components@1.0.2:
+    resolution: {integrity: sha512-HnVS5Z8EwuQsHnXNvZR5fu8wj+1xMuAzoYMGGxI8ppMJm38c1SbUjQVNtSAu5hNval5SEqMbit+WGhIEvUAmrQ==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3340,7 +3340,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  qiannai-components@1.0.1: {}
+  qiannai-components@1.0.2: {}
 
   resolve-from@4.0.0: {}
 
