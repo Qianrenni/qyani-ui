@@ -23,7 +23,6 @@ const copy = (value: string) => {
         v-for="value in icons"
         :key="value" 
         class=" container-column"
-        style="align-items: center;"
         @click="copy(value)"
       >
         <QIcon 

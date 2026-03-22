@@ -14,7 +14,11 @@ const code = `
 <template>
   <DemoBlock :code="code">
     <div class="container">
-      <QScrollNotice :text="'无线滚动'" :width="300" class="padding-fourth-rem radius-rem bg-body"/>
+      <QScrollNotice>
+        <template #default>
+          <span>无线滚动</span>
+        </template>
+      </QScrollNotice>
     </div>
   </DemoBlock>
 </template>

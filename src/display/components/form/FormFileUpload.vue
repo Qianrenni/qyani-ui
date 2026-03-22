@@ -33,18 +33,18 @@ const form = reactive({
   <demo-block :code="code">
     <div class="container-column gap">
       <QFormFileUpload
-          v-model="form.file"
-          accept="image/*,.pdf"
-          label="上传文件"
-          name="file"
+        v-model="form.file"
+        accept="image/*,.pdf"
+        label="上传文件"
+        name="file"
       />
       <QFormFileUpload
-          v-model="form.files"
-          accept="*"
-          direction="horizontal"
-          label="多文件上传"
-          multiple
-          name="files"
+        v-model="form.files"
+        accept="*"
+        direction="vertical"
+        label="多文件上传"
+        multiple
+        name="files"
       />
     </div>
   </demo-block>

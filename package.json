@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@types/node": "^24.3.0",
-    "qiannai-components": "^1.0.1",
+    "qiannai-components": "^1.0.2",
     "vue": "^3.5.18"
   },
   "devDependencies": {

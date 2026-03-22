@@ -2,9 +2,9 @@
   <DemoBlock :code="code">
     <div class="container margin-vetical container-w100">
       <QTree
-          :data="treeData"
-          @nodeClick="(node:TreeNodeData) => console.log(node)"
-          class="tree-contaienr container-w100"
+        :data="treeData"
+        class="tree-contaienr container-w100"
+        @node-click="(node:TreeNodeData) => console.log(node)"
       />
     </div>
   </DemoBlock>
