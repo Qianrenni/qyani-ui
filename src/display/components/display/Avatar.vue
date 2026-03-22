@@ -8,13 +8,13 @@ defineOptions({
 })
 const code = `
 \`\`\`html
-<QAvatar/>
+    <QAvatar url="https://picsum.photos/200/300" />
 \`\`\`
 `
 </script>
 <template>
   <DemoBlock :code="code">
-    <QAvatar/>
+    <QAvatar url="https://picsum.photos/200/300" />
   </DemoBlock>
 </template>
 
